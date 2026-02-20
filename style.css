@@ -1,0 +1,523 @@
+:root {
+    --primary-color: #F58025;
+    /* Princeton Orange */
+    --secondary-color: #000000;
+    /* Black */
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --light-gray: #F8F9FA;
+    --dark-gray: #222222;
+    --white: #FFFFFF;
+    --font-main: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --transition-speed: 0.3s;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-speed);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header & Nav */
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: var(--white);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 400;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(245, 128, 37, 0.1) 100%), url('images/nassau_hall_autumn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    /* Override section max-width */
+    margin: 0;
+    /* Override section margin */
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin-bottom: 3rem;
+    font-weight: 400;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(245, 128, 37, 0.4);
+    transition: all var(--transition-speed);
+}
+
+.btn:hover {
+    background-color: #d46a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(245, 128, 37, 0.6);
+}
+
+/* Sections */
+section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    color: var(--secondary-color);
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background-color: var(--primary-color);
+    margin: 1.5rem auto 0;
+    border-radius: 3px;
+}
+
+/* About */
+.about p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #444;
+}
+
+/* Participation */
+.participation {
+    background-color: var(--light-gray);
+    border-radius: 24px;
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+}
+
+.participation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.participation-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed);
+    border-top: 4px solid var(--primary-color);
+}
+
+.participation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.participation-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.participation-card p {
+    font-size: 1.05rem;
+    color: #555;
+}
+
+/* Speakers */
+.speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.speaker-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.speaker-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.speaker-img {
+    width: 100%;
+    height: 280px;
+    background-color: #e0e0e0;
+    object-fit: cover;
+}
+
+.speaker-info {
+    padding: 2rem;
+}
+
+.speaker-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.speaker-title {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.speaker-affil {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Schedule */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--white);
+    box-shadow: var(--card-shadow);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.schedule-table th {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.schedule-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Logistics / Travel */
+.logistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.logistics-card {
+    background-color: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.logistics-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--white);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.logistics-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgba(245, 128, 37, 0.2);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Committee */
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.committee-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.committee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-role {
+    background: var(--secondary-color);
+    color: var(--white);
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.committee-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 1.5rem auto 1rem;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    padding: 3px;
+}
+
+.card-info {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.card-info a {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.2rem;
+}
+
+.card-info a:hover {
+    color: var(--primary-color);
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Past NERCs */
+.past-nercs {
+    background-color: var(--light-gray);
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.past-hosts-list ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.past-hosts-list li {
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-folder {
+    width: 24px;
+    height: 18px;
+    background-color: #555;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.icon-folder::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 10px;
+    height: 4px;
+    background-color: #555;
+    border-radius: 2px 2px 0 0;
+}
+
+.icon-folder::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.past-hosts-list li strong {
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #000 0%, #1a1a1a 100%);
+    color: var(--white);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    border-top: 5px solid var(--primary-color);
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin: 2rem 0;
+}
+
+.footer-links a {
+    margin: 0 1.5rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 1rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
