@@ -215,7 +215,6 @@ section {
     background-color: var(--light-gray);
     border-radius: 24px;
     padding: 4rem 2rem;
-    margin-bottom: 4rem;
 }
 
 .participation-grid {
@@ -229,13 +228,7 @@ section {
     padding: 2.5rem;
     border-radius: 16px;
     box-shadow: var(--card-shadow);
-    transition: transform var(--transition-speed);
     border-top: 4px solid var(--primary-color);
-}
-
-.participation-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--card-hover-shadow);
 }
 
 .participation-card h3 {
@@ -249,7 +242,43 @@ section {
     color: #555;
 }
 
+.participation-details {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    border-top: 4px solid var(--primary-color);
+    margin-top: 3rem;
+}
+
+.participation-details h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.participation-details p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.participation-details ul {
+    font-size: 1.05rem;
+    color: #555;
+    list-style-type: disc;
+    margin: 0 0 1rem 1.5rem;
+}
+
 /* Speakers */
+.speakers-intro {
+    font-size: 1.15rem;
+    color: #444;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3.5rem;
+}
+
 .speaker-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -262,13 +291,7 @@ section {
     overflow: hidden;
     text-align: center;
     box-shadow: var(--card-shadow);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.speaker-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--card-hover-shadow);
 }
 
 .speaker-img {
@@ -287,6 +310,25 @@ section {
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--secondary-color);
+}
+
+.speaker-name a:hover {
+    color: var(--primary-color);
+}
+
+.speaker-card-tba {
+    border: 1px dashed #ccc;
+    box-shadow: none;
+}
+
+.speaker-img-tba {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f2f3f5 0%, #e4e6e9 100%);
+    color: #b8bcc2;
+    font-size: 4.5rem;
+    font-weight: 700;
 }
 
 .speaker-title {
@@ -347,14 +389,7 @@ section {
     padding: 2.5rem;
     border-radius: 16px;
     box-shadow: var(--card-shadow);
-    transition: transform var(--transition-speed);
     border: 1px solid rgba(0, 0, 0, 0.03);
-}
-
-.logistics-card:hover {
-    transform: translateY(-5px);
-    background-color: var(--white);
-    box-shadow: var(--card-hover-shadow);
 }
 
 .logistics-card h3 {
@@ -364,6 +399,15 @@ section {
     border-bottom: 2px solid rgba(245, 128, 37, 0.2);
     padding-bottom: 0.5rem;
     display: inline-block;
+}
+
+.logistics-card a {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.logistics-card a:hover {
+    text-decoration: underline;
 }
 
 /* Committee */
@@ -378,14 +422,8 @@ section {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--card-shadow);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     text-align: center;
     border: 1px solid #eee;
-}
-
-.committee-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--card-hover-shadow);
 }
 
 .card-role {
@@ -432,7 +470,8 @@ section {
 /* Past NERCs */
 .past-nercs {
     background-color: var(--light-gray);
-    padding: 6rem 2rem;
+    border-radius: 24px;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
@@ -532,6 +571,28 @@ footer {
 
     section {
         padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .participation,
+    .past-nercs {
+        padding: 3rem 1.5rem;
+    }
+
+    .participation-grid,
+    .speaker-grid,
+    .committee-grid {
+        gap: 1.5rem;
+    }
+
+    .participation-card,
+    .participation-details,
+    .logistics-card {
+        padding: 1.75rem;
     }
 
     .schedule-table th,
