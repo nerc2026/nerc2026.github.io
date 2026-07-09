@@ -172,6 +172,24 @@ nav {
     box-shadow: 0 8px 25px rgba(245, 128, 37, 0.6);
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+}
+
 /* Sections */
 section {
     padding: 6rem 2rem;
@@ -268,6 +286,15 @@ section {
     color: #555;
     list-style-type: disc;
     margin: 0 0 1rem 1.5rem;
+}
+
+.participation-details a:not(.btn) {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.participation-details a:not(.btn):hover {
+    text-decoration: underline;
 }
 
 /* Speakers */
