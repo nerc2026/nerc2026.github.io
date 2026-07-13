@@ -770,28 +770,17 @@ footer {
 }
 
 .reg-table {
-    max-width: 640px;
+    max-width: 520px;
     margin: 0 auto 1.5rem;
 }
 
-.reg-table th {
-    white-space: nowrap;
-}
-
-.reg-table th:not(:first-child),
-.reg-table td:not(:first-child) {
-    text-align: center;
+.reg-table td:last-child {
     font-weight: 700;
 }
 
 .reg-table th:first-child,
 .reg-table td:first-child {
-    width: 34%;
-}
-
-.reg-table th:not(:first-child),
-.reg-table td:not(:first-child) {
-    width: 33%;
+    width: 60%;
 }
 
 /* Navigation pill custom styling */
