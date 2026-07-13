@@ -889,3 +889,131 @@ footer {
 .footer-tagline a:hover {
     text-decoration: underline;
 }
+
+/* Key Dates Section Styling */
+.dates {
+    background-color: var(--white);
+}
+
+.dates .section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: -2.5rem auto 3.5rem;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--primary-text);
+}
+
+.key-dates-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1.05rem;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.key-dates-table tbody td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid #eaeaea;
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
+}
+
+.key-dates-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.key-dates-table tbody tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+/* Subtle, premium hover effect on table rows */
+.key-dates-table tbody tr:not(.highlight-row):hover td {
+    background-color: rgba(245, 128, 37, 0.03);
+}
+
+.key-dates-table .col-date {
+    font-weight: 600;
+    color: var(--primary-color);
+    white-space: nowrap;
+    width: 160px;
+}
+
+.key-dates-table .col-name {
+    font-weight: 700;
+    color: var(--secondary-color);
+    width: 240px;
+}
+
+.key-dates-table .col-desc {
+    color: var(--primary-text);
+    font-size: 0.95rem;
+}
+
+/* Softened, elegant highlight row instead of solid harsh orange */
+.key-dates-table .highlight-row td {
+    background-color: rgba(245, 128, 37, 0.06) !important;
+    border-top: 1px solid rgba(245, 128, 37, 0.15) !important;
+    border-bottom: 1px solid rgba(245, 128, 37, 0.15) !important;
+}
+
+.key-dates-table .highlight-row .col-date {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+.key-dates-table .highlight-row .col-name {
+    color: var(--secondary-color) !important;
+    font-weight: 700;
+}
+
+.key-dates-table .highlight-row .col-desc {
+    color: var(--primary-text) !important;
+}
+
+@media (max-width: 768px) {
+    .key-dates-table, 
+    .key-dates-table tbody, 
+    .key-dates-table tr, 
+    .key-dates-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .key-dates-table tr {
+        border-bottom: 1px solid #eaeaea;
+        padding: 1.25rem;
+    }
+    
+    .key-dates-table tr:last-child {
+        border-bottom: none;
+    }
+    
+    .key-dates-table td {
+        padding: 0.3rem 0 !important;
+        border: none !important;
+    }
+    
+    .key-dates-table .col-date {
+        font-size: 1.15rem;
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+    
+    .key-dates-table .col-name {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-top: 0.2rem;
+    }
+    
+    .key-dates-table .col-desc {
+        font-size: 0.95rem;
+        margin-top: 0.4rem;
+        line-height: 1.5;
+    }
+}
