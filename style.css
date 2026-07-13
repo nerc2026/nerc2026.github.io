@@ -1,6 +1,7 @@
 :root {
     --primary-color: #F58025;
     /* Princeton Orange */
+    --primary-text: #C4600F;
     --secondary-color: #000000;
     /* Black */
     --text-color: #333333;
@@ -18,7 +19,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+html {
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -33,6 +43,13 @@ a {
     text-decoration: none;
     color: inherit;
     transition: color var(--transition-speed);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 2px;
 }
 
 ul {
@@ -107,14 +124,18 @@ nav {
     opacity: 1;
 }
 
-/* Hero Section */
+.nav-links a.active {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(245, 128, 37, 0.1) 100%), url('images/nassau_hall_autumn.jpg');
+    background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.65) 100%), url('images/nassau_hall_autumn.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,7 +143,6 @@ nav {
     text-align: center;
     color: var(--white);
     padding: 0 1rem;
-    margin-bottom: 2rem;
     max-width: 100%;
     /* Override section max-width */
     margin: 0;
@@ -130,24 +150,24 @@ nav {
 }
 
 .hero h1 {
-    font-size: 5rem;
+    font-size: clamp(3rem, 8vw, 5rem);
     margin-bottom: 0.5rem;
     font-weight: 700;
     letter-spacing: -2px;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero h2 {
-    font-size: 2.5rem;
+.hero .hero-subtitle {
+    font-size: clamp(1.6rem, 4.5vw, 2.5rem);
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.5rem;
     font-weight: 700;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
-    font-size: 1.5rem;
-    max-width: 700px;
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    max-width: 900px;
     margin-bottom: 3rem;
     font-weight: 400;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -179,6 +199,39 @@ nav {
     justify-content: center;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    @keyframes heroFade {
+        from {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .hero h1 {
+        animation: heroFade 0.7s ease-out both;
+        animation-delay: 0s;
+    }
+
+    .hero .hero-subtitle {
+        animation: heroFade 0.7s ease-out both;
+        animation-delay: 0.1s;
+    }
+
+    .hero p {
+        animation: heroFade 0.7s ease-out both;
+        animation-delay: 0.2s;
+    }
+
+    .hero-buttons {
+        animation: heroFade 0.7s ease-out both;
+        animation-delay: 0.3s;
+    }
+}
+
 .btn-secondary {
     background-color: transparent;
     border: 2px solid var(--white);
@@ -199,7 +252,7 @@ section {
 
 .section-title {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
     margin-bottom: 4rem;
     color: var(--secondary-color);
     position: relative;
@@ -289,7 +342,7 @@ section {
 }
 
 .participation-details a:not(.btn) {
-    color: var(--primary-color);
+    color: var(--primary-text);
     font-weight: 700;
 }
 
@@ -340,7 +393,7 @@ section {
 }
 
 .speaker-name a:hover {
-    color: var(--primary-color);
+    color: var(--primary-text);
 }
 
 .speaker-card-tba {
@@ -367,7 +420,7 @@ section {
 .speaker-affil {
     font-size: 0.95rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--primary-text);
 }
 
 /* Schedule */
@@ -401,7 +454,24 @@ section {
 }
 
 .schedule-table tr:hover {
-    background-color: #f9f9f9;
+    background-color: #f3f4f6;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.schedule-table small {
+    color: #666;
+}
+
+.schedule-table tr.highlight td {
+    border-left: none;
+}
+
+.schedule-table tr.highlight {
+    box-shadow: inset 4px 0 0 var(--primary-color);
+    background-color: rgba(245, 128, 37, 0.05);
 }
 
 /* Logistics / Travel */
@@ -420,7 +490,7 @@ section {
 }
 
 .logistics-card h3 {
-    color: var(--primary-color);
+    color: var(--primary-text);
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     border-bottom: 2px solid rgba(245, 128, 37, 0.2);
@@ -429,7 +499,7 @@ section {
 }
 
 .logistics-card a {
-    color: var(--primary-color);
+    color: var(--primary-text);
     font-weight: 700;
 }
 
@@ -455,11 +525,11 @@ section {
 
 .card-role {
     background: var(--secondary-color);
-    color: var(--white);
-    font-size: 0.8rem;
+    color: var(--primary-color);
+    font-size: 0.75rem;
     padding: 0.5rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     font-weight: 700;
 }
 
@@ -486,7 +556,7 @@ section {
 }
 
 .card-info a:hover {
-    color: var(--primary-color);
+    color: var(--primary-text);
 }
 
 .card-info p {
@@ -522,39 +592,8 @@ section {
     gap: 1rem;
 }
 
-.icon-folder {
-    width: 24px;
-    height: 18px;
-    background-color: #555;
-    border-radius: 2px;
-    position: relative;
-    display: inline-block;
-}
-
-.icon-folder::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: 0;
-    width: 10px;
-    height: 4px;
-    background-color: #555;
-    border-radius: 2px 2px 0 0;
-}
-
-.icon-folder::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 6px;
-    height: 6px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-}
-
 .past-hosts-list li strong {
-    color: var(--primary-color);
+    color: var(--primary-text);
 }
 
 /* Footer */
@@ -574,10 +613,13 @@ footer {
 
 .footer-links {
     margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 3rem;
 }
 
 .footer-links a {
-    margin: 0 1.5rem;
     color: #888;
     font-weight: 400;
 }
@@ -588,21 +630,8 @@ footer {
 
 /* Mobile and Tablet Styles */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
     section {
         padding: 4rem 1.5rem;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 2.5rem;
     }
 
     .participation,
@@ -668,6 +697,10 @@ footer {
         padding: 0.5rem 0;
     }
 
+    .nav-links .nav-cta {
+        display: inline-block;
+    }
+
     /* Hamburger Animation to 'X' */
     .menu-toggle.active span:nth-child(1) {
         transform: translateY(7.5px) rotate(45deg);
@@ -683,4 +716,176 @@ footer {
         transform: translateY(-7.5px) rotate(-45deg);
         background-color: var(--primary-color);
     }
+
+    .hero {
+        background-image: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.65) 100%), url('images/nassau_hall_autumn_mobile.jpg');
+    }
+}
+
+/* Custom classes for NERC 2026 */
+.skip-link {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    z-index: 2000;
+}
+
+.btn-row {
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+}
+
+.text-center-note {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hotel-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.contact-note {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.contact-note a {
+    color: var(--primary-text);
+}
+
+.schedule-table th:first-child,
+.schedule-table td:first-child {
+    width: 20%;
+}
+
+.reg-table {
+    max-width: 520px;
+    margin: 0 auto 1.5rem;
+}
+
+.reg-table td:last-child {
+    font-weight: 700;
+}
+
+.reg-table th:first-child,
+.reg-table td:first-child {
+    width: 60%;
+}
+
+/* Navigation pill custom styling */
+.nav-links .nav-cta {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.45rem 1.1rem;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.nav-links a.nav-cta:hover {
+    background-color: #d46a1a;
+    color: var(--white);
+    opacity: 1;
+}
+
+/* Registration section styling */
+.reg-intro {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #444;
+}
+
+/* Unified card hover effects */
+.participation-card,
+.speaker-card,
+.committee-card,
+.logistics-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .participation-card:hover,
+    .speaker-card:not(.speaker-card-tba):hover,
+    .committee-card:hover,
+    .logistics-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--card-hover-shadow);
+    }
+}
+
+/* Back-to-top button styling */
+#back-to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Scroll reveal styles */
+@media (prefers-reduced-motion: no-preference) {
+    html.js section {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    html.js section.revealed {
+        opacity: 1;
+        transform: none;
+    }
+
+    html.js section.hero {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Footer Tagline and Links */
+.footer-tagline {
+    color: #888;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-tagline a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-tagline a:hover {
+    text-decoration: underline;
 }

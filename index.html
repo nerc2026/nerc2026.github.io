@@ -4,52 +4,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
     <title>NERC 2026 | Northeast Robotics Colloquium</title>
     <meta name="description" content="The Northeast Robotics Colloquium (NERC 2026) is an annual research meeting and networking showcase bringing together the robotics community of the northeastern United States and Canada at Princeton University on October 3, 2026.">
+    <link rel="canonical" href="https://nerc2026.github.io/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NERC 2026">
     <meta property="og:url" content="https://nerc2026.github.io/">
     <meta property="og:title" content="NERC 2026 | Northeast Robotics Colloquium">
     <meta property="og:description" content="Join the top academic and industrial robotics researchers from across the Northeast and Canada on October 3, 2026 at Princeton University.">
-    <meta property="og:image" content="images/nassau_hall_autumn.jpg">
+    <meta property="og:image" content="https://nerc2026.github.io/images/nassau_hall_autumn.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+    <meta property="og:image:alt" content="Aerial view of the Princeton University campus in autumn">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nerc2026.github.io/">
-    <meta property="twitter:title" content="NERC 2026 | Northeast Robotics Colloquium">
-    <meta property="twitter:description" content="Join the top academic and industrial robotics researchers from across the Northeast and Canada on October 3, 2026 at Princeton University.">
-    <meta property="twitter:image" content="images/nassau_hall_autumn.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nerc2026.github.io/">
+    <meta name="twitter:title" content="NERC 2026 | Northeast Robotics Colloquium">
+    <meta name="twitter:description" content="Join the top academic and industrial robotics researchers from across the Northeast and Canada on October 3, 2026 at Princeton University.">
+    <meta name="twitter:image" content="https://nerc2026.github.io/images/nassau_hall_autumn.jpg">
+    <meta name="twitter:image:alt" content="Aerial view of the Princeton University campus in autumn">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+    <link rel="preload" as="image" href="images/nassau_hall_autumn.jpg" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="images/nassau_hall_autumn_mobile.jpg" media="(max-width: 768px)">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link rel="preload" as="font" type="font/woff2" href="fonts/atkinson-400.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/atkinson-700.woff2" crossorigin>
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Northeast Robotics Colloquium 2026 (NERC 2026)",
+        "startDate": "2026-10-03T08:00:00-04:00",
+        "endDate": "2026-10-03T17:00:00-04:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+            "@type": "Place",
+            "name": "Princeton University, Commons",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "11 Ivy Lane",
+                "addressLocality": "Princeton",
+                "addressRegion": "NJ",
+                "postalCode": "08540",
+                "addressCountry": "US"
+            }
+        },
+        "image": "https://nerc2026.github.io/images/nassau_hall_autumn.jpg",
+        "url": "https://nerc2026.github.io/",
+        "description": "The Northeast Robotics Colloquium (NERC 2026) is an annual research meeting and networking showcase bringing together the robotics community of the northeastern United States and Canada at Princeton University on October 3, 2026.",
+        "organizer": {
+            "@type": "Organization",
+            "name": "Princeton Robotics, Princeton University",
+            "url": "https://www.princeton.edu"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets",
+            "price": "30.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2026-07-01"
+        },
+        "performer": [
+            {
+                "@type": "Person",
+                "name": "Kirstin H. Petersen",
+                "affiliation": "Cornell University"
+            },
+            {
+                "@type": "Person",
+                "name": "Zhengbo Zou",
+                "affiliation": "Columbia University"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Navigation -->
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <div class="logo"><img src="images/nerc.jpeg" alt="NERC 2026 Logo"></div>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#speakers">Speakers</a></li>
                 <li><a href="#participation">Participation</a></li>
+                <li><a href="#speakers">Speakers</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#logistics">Travel</a></li>
                 <li><a href="#organizers">Committee</a></li>
+                <li><a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets" target="_blank" rel="noopener" class="nav-cta">Register</a></li>
             </ul>
         </nav>
     </header>
@@ -57,14 +120,15 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>NERC 2026</h1>
-        <h2>Northeast Robotics Colloquium</h2>
-        <p>October 3, 2026 &bull; Princeton University</p>
+        <p class="hero-subtitle">Northeast Robotics Colloquium</p>
+        <p>Saturday, October 3, 2026 &bull; 8:00 AM &ndash; 5:00 PM &bull; Princeton University</p>
         <div class="hero-buttons">
-            <a href="https://openreview.net/group?id=NERC/2026/Conference" target="_blank" class="btn">Submit on
-                OpenReview</a>
-            <a href="#about" class="btn btn-secondary">Learn More</a>
+            <a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets" target="_blank" rel="noopener" class="btn">Register on Eventbrite</a>
+            <a href="https://openreview.net/group?id=NERC/2026/Conference" target="_blank" rel="noopener" class="btn btn-secondary">Submit on OpenReview</a>
         </div>
     </section>
+
+    <main id="main" tabindex="-1">
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -72,8 +136,33 @@
         <p>
             NERC 2026 will be hosted in <strong>Commons</strong> at <strong>Princeton University</strong> on <strong>October 3, 2026</strong>. The
             program includes keynote talks from distinguished leaders, a Rising Stars oral presentation session, and
-            vibrant poster sessions for students and researchers.
+            vibrant poster sessions for students and researchers. Registration is open to the entire robotics community &mdash; see the <a href="#registration">registration details</a> below.
         </p>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="registration">
+        <h2 class="section-title">Registration</h2>
+        <p class="reg-intro">NERC 2026 is open to researchers, students, and industry professionals. Registration is handled through Eventbrite.</p>
+        <table class="schedule-table reg-table">
+            <thead>
+                <tr>
+                    <th scope="col">Registration Type</th>
+                    <th scope="col">Rate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Student</td><td>$30</td></tr>
+                <tr><td>Academic</td><td>$50</td></tr>
+                <tr><td>Industry</td><td>$100</td></tr>
+            </tbody>
+        </table>
+        <p class="text-center-note">Tickets are refundable up to 7 days before the event. NERC 2026 is an in-person, full-day program (8:00 AM &ndash; 5:00 PM ET) at Princeton University.</p>
+        <p class="text-center-note">Questions? Contact us at <a href="mailto:nerc2026@princeton.edu">nerc2026@princeton.edu</a>.</p>
+        <p class="btn-row">
+            <a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets" target="_blank" rel="noopener" class="btn">Register on Eventbrite</a>
+        </p>
+        <p class="text-center-note"><a href="nerc2026.ics">Add NERC 2026 to your calendar (.ics)</a></p>
     </section>
 
     <!-- Call for Participation -->
@@ -115,11 +204,10 @@
                 <li><strong>Acceptance notification:</strong> TBD</li>
                 <li><strong>Colloquium:</strong> Saturday, October 3, 2026</li>
             </ul>
-            <p style="text-align: center; margin: 2.5rem 0 1.5rem;">
-                <a href="https://openreview.net/group?id=NERC/2026/Conference" target="_blank" class="btn">Submit on
+            <p class="btn-row">
+                <a href="https://openreview.net/group?id=NERC/2026/Conference" target="_blank" rel="noopener" class="btn">Submit on
                     OpenReview</a>
             </p>
-            <p>Questions? Contact us at <a href="mailto:nerc2026@princeton.edu">nerc2026@princeton.edu</a>.</p>
         </div>
     </section>
 
@@ -133,19 +221,19 @@
         </p>
         <div class="speaker-grid">
             <div class="speaker-card">
-                <img src="images/speakers/petersen.jpg" alt="Kirstin H. Petersen" class="speaker-img">
+                <img src="images/speakers/petersen.jpg" alt="Kirstin H. Petersen" class="speaker-img" width="280" height="280" loading="lazy" decoding="async">
                 <div class="speaker-info">
                     <h3 class="speaker-name"><a href="https://www.ece.cornell.edu/faculty-directory/kirstin-hagelskjaer-petersen"
-                            target="_blank">Kirstin H. Petersen</a></h3>
+                            target="_blank" rel="noopener">Kirstin H. Petersen</a></h3>
                     <p class="speaker-title">Associate Professor, Electrical and Computer Engineering</p>
                     <p class="speaker-affil">Cornell University</p>
                 </div>
             </div>
             <div class="speaker-card">
-                <img src="images/speakers/zou.jpg" alt="Zhengbo Zou" class="speaker-img">
+                <img src="images/speakers/zou.jpg" alt="Zhengbo Zou" class="speaker-img" width="280" height="280" loading="lazy" decoding="async">
                 <div class="speaker-info">
                     <h3 class="speaker-name"><a href="https://www.civil.columbia.edu/content/zhengbo-zou"
-                            target="_blank">Zhengbo Zou</a></h3>
+                            target="_blank" rel="noopener">Zhengbo Zou</a></h3>
                     <p class="speaker-title">Assistant Professor, Civil Engineering and Engineering Mechanics</p>
                     <p class="speaker-affil">Columbia University</p>
                 </div>
@@ -163,14 +251,14 @@
     <!-- Schedule Section -->
     <section id="schedule" class="schedule">
         <h2 class="section-title">Schedule</h2>
-        <p style="text-align:center; margin-bottom: 2rem;">Tentative Schedule for <strong>Saturday, October 3,
+        <p class="text-center-note">Tentative Schedule for <strong>Saturday, October 3,
                 2026</strong>. Details subject to change.</p>
 
         <table class="schedule-table">
             <thead>
                 <tr>
-                    <th width="20%">Time</th>
-                    <th>Event</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Event</th>
                 </tr>
             </thead>
             <tbody>
@@ -178,7 +266,7 @@
                     <td>8:00 AM</td>
                     <td>Registration & Breakfast</td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                     <td>8:50 AM</td>
                     <td><strong>Opening Remarks</strong><br><small>Featuring Princeton Robotics Lab videos</small></td>
                 </tr>
@@ -186,7 +274,7 @@
                     <td>9:00 AM</td>
                     <td>Rising Stars / Submitted Talks</td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                     <td>9:15 AM</td>
                     <td><strong>Invited Speaker I</strong><br><small>40 min talk + 5 min Q&A</small></td>
                 </tr>
@@ -198,7 +286,7 @@
                     <td>11:30 AM</td>
                     <td>Rising Stars / Submitted Talks</td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                     <td>11:45 AM</td>
                     <td><strong>Invited Speaker II</strong><br><small>40 min talk + 5 min Q&A</small></td>
                 </tr>
@@ -210,7 +298,7 @@
                     <td>1:30 PM</td>
                     <td>Rising Stars / Submitted Talks</td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                     <td>1:45 PM</td>
                     <td><strong>Invited Speaker III</strong><br><small>40 min talk + 5 min Q&A</small></td>
                 </tr>
@@ -222,12 +310,12 @@
                     <td>4:00 PM</td>
                     <td>Rising Stars / Submitted Talks</td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                     <td>4:15 PM</td>
                     <td><strong>Faculty & Industry Panel: Career Advice</strong><br><small>40 min + 5 min Q&A</small>
                     </td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                     <td>5:00 PM</td>
                     <td><strong>Closing Remarks & Awards</strong><br><small>Awards, Princeton Lab videos, and NERC 2027
                             announcement</small></td>
@@ -246,14 +334,14 @@
         <div class="logistics-grid">
             <div class="logistics-card">
                 <h3>Venue</h3>
-                <p><strong>Princeton University</strong><br>
+                <p>Princeton University<br>
                     Commons<br>
-                    Ivy Lane<br>
-                    Princeton, NJ 08544</p>
+                    11 Ivy Lane<br>
+                    Princeton, NJ 08540</p>
                 <br>
                 <p>The main events (keynotes, oral sessions, panels) will be held in
                     <a href="https://experience.arcgis.com/experience/366d5b2cddfb4aa990eb75f04aec8ade#widget_69=text:0949"
-                        target="_blank">Commons</a>, part of Princeton's new engineering neighborhood on Ivy Lane,
+                        target="_blank" rel="noopener">Commons</a>, part of Princeton's new engineering neighborhood on Ivy Lane,
                     across from Princeton Stadium.</p>
             </div>
             <div class="logistics-card">
@@ -269,19 +357,19 @@
                 <h3>Accommodation</h3>
                 <p>Here are several recommended hotel options near campus (note: there are no reserved room blocks
                     for the event):</p>
-                <ul style="list-style-type: disc; margin-left: 1.5rem; margin-top: 0.5rem;">
-                    <li><a href="https://nassauinn.com/" target="_blank">Nassau Inn</a> [~20-minute walk to
+                <ul class="hotel-list">
+                    <li><a href="https://nassauinn.com/" target="_blank" rel="noopener">Nassau Inn</a> [~20-minute walk to
                         Commons]</li>
-                    <li><a href="https://www.graduatehotels.com/princeton/" target="_blank">Graduate Princeton</a>
+                    <li><a href="https://www.graduatehotels.com/princeton/" target="_blank" rel="noopener">Graduate Princeton</a>
                         [~20-minute walk to Commons]</li>
-                    <li><a href="https://www.peacockinn.com/" target="_blank">The Peacock Inn</a> [~25-minute walk,
+                    <li><a href="https://www.peacockinn.com/" target="_blank" rel="noopener">The Peacock Inn</a> [~25-minute walk,
                         or ~5-minute Uber/drive]</li>
                     <li><a href="https://www.hyatt.com/hyatt-regency/en-US/princ-hyatt-regency-princeton"
-                            target="_blank">Hyatt Regency Princeton</a> [~5-10 minute Uber/drive, 2.5 miles]</li>
+                            target="_blank" rel="noopener">Hyatt Regency Princeton</a> [~5-10 minute Uber/drive, 2.5 miles]</li>
                     <li><a href="https://www.marriott.com/en-us/hotels/ttnww-residence-inn-princeton-at-carnegie-center/overview/"
-                            target="_blank">Residence Inn Princeton</a> [~7-10 minute Uber/drive, 3.0 miles]</li>
+                            target="_blank" rel="noopener">Residence Inn Princeton</a> [~7-10 minute Uber/drive, 3.0 miles]</li>
                     <li><a href="https://www.hyatt.com/hyatt-place/en-US/ewrzp-hyatt-place-princeton"
-                            target="_blank">Hyatt Place Princeton</a> [~8-12 minute Uber/drive, 3.5 miles]</li>
+                            target="_blank" rel="noopener">Hyatt Place Princeton</a> [~8-12 minute Uber/drive, 3.5 miles]</li>
                 </ul>
             </div>
         </div>
@@ -294,8 +382,8 @@
         <div class="committee-grid">
             <div class="committee-card">
                 <div class="card-role">General Co-Chair</div>
-                <img src="https://robotics.princeton.edu/sites/g/files/toruqf1606/files/styles/3x4_750w_1000h/public/people/jfisac2020a_zoom.jpg?itok=ay_NcpBK"
-                    alt="Jaime Fernandez Fisac">
+                <img src="images/committee/fisac.jpg"
+                    alt="Jaime Fernandez Fisac" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://saferobotics.princeton.edu/" target="_blank" rel="noopener noreferrer">Jaime Fernandez
                         Fisac</a>
@@ -304,7 +392,7 @@
             </div>
             <div class="committee-card">
                 <div class="card-role">General Co-Chair</div>
-                <img src="images/committee/tomsilver.jpg" alt="Tom Silver">
+                <img src="images/committee/tomsilver.jpg" alt="Tom Silver" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://tomsilver.github.io/" target="_blank" rel="noopener noreferrer">Tom Silver</a>
                     <p>Princeton University</p>
@@ -312,8 +400,8 @@
             </div>
             <div class="committee-card">
                 <div class="card-role">Program Chair</div>
-                <img src="https://robotics.princeton.edu/sites/g/files/toruqf1606/files/styles/3x4_750w_1000h/public/people/20211017_101201.jpg?itok=FiqXTBV6"
-                    alt="Christine Allen-Blanchette">
+                <img src="images/committee/allen-blanchette.jpg"
+                    alt="Christine Allen-Blanchette" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://engineering.princeton.edu/faculty/christine-allen-blanchette" target="_blank" rel="noopener noreferrer">Christine
                         Allen-Blanchette</a>
@@ -322,8 +410,8 @@
             </div>
             <div class="committee-card">
                 <div class="card-role">Local Chair</div>
-                <img src="https://robotics.princeton.edu/sites/g/files/toruqf1606/files/styles/3x4_750w_1000h/public/people/reza.png?itok=J9nzlt9O"
-                    alt="Reza Moini">
+                <img src="images/committee/moini.jpg"
+                    alt="Reza Moini" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://moini.princeton.edu/" target="_blank" rel="noopener noreferrer">Reza Moini</a>
                     <p>Princeton University</p>
@@ -331,8 +419,8 @@
             </div>
             <div class="committee-card">
                 <div class="card-role">Sponsorship Chair</div>
-                <img src="https://engineering.princeton.edu/wp-content/uploads/2024/11/Stellato-final-2024-DKC-portrait.png"
-                    alt="Bartolomeo Stellato">
+                <img src="images/committee/stellato.jpg"
+                    alt="Bartolomeo Stellato" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://stella.to/" target="_blank" rel="noopener noreferrer">Bartolomeo
                         Stellato</a>
@@ -341,8 +429,8 @@
             </div>
             <div class="committee-card">
                 <div class="card-role">Publicity Chair</div>
-                <img src="https://dhruvshah.me/assets/DhruvShah25.jpg"
-                    alt="Dhruv Shah">
+                <img src="images/committee/shah.jpg"
+                    alt="Dhruv Shah" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://dhruvshah.me/" target="_blank" rel="noopener noreferrer">Dhruv Shah</a>
                     <p>Princeton University</p>
@@ -350,8 +438,8 @@
             </div>
             <div class="committee-card">
                 <div class="card-role">Awards Committee</div>
-                <img src="https://robotics.princeton.edu/sites/g/files/toruqf1606/files/styles/3x4_750w_1000h/public/people/majumdar.jpg?itok=coqobEuA"
-                    alt="Ani Majumdar">
+                <img src="images/committee/majumdar.jpg"
+                    alt="Ani Majumdar" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://irom-lab.princeton.edu/majumdar/" target="_blank" rel="noopener noreferrer">Ani Majumdar</a>
                     <p>Princeton University</p>
@@ -359,8 +447,8 @@
             </div>
             <div class="committee-card">
                 <div class="card-role">Awards Committee</div>
-                <img src="https://robotics.princeton.edu/sites/g/files/toruqf1606/files/styles/3x4_750w_1000h/public/people/wissa-new-square_crop.jpg?itok=61UtdYrN"
-                    alt="Aimy Wissa">
+                <img src="images/committee/wissa.jpg"
+                    alt="Aimy Wissa" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://engineering.princeton.edu/faculty/aimy-wissa" target="_blank" rel="noopener noreferrer">Aimy Wissa</a>
                     <p>Princeton University</p>
@@ -368,8 +456,8 @@
             </div>
             <div class="committee-card">
                 <div class="card-role">Awards Committee</div>
-                <img src="https://robotics.princeton.edu/sites/g/files/toruqf1606/files/styles/3x4_750w_1000h/public/people/naomi.png?itok=mccFoY8s"
-                    alt="Naomi Leonard">
+                <img src="images/committee/leonard.jpg"
+                    alt="Naomi Leonard" width="100" height="100" loading="lazy" decoding="async">
                 <div class="card-info">
                     <a href="https://naomi.princeton.edu/" target="_blank" rel="noopener noreferrer">Naomi Leonard</a>
                     <p>Princeton University</p>
@@ -377,9 +465,8 @@
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 3rem;">
-            <p><em>Contact us at: <a href="mailto:nerc2026@princeton.edu"
-                        style="color: var(--primary-color);">nerc2026@princeton.edu</a></em></p>
+        <div class="contact-note">
+            <p><em>Contact us at: <a href="mailto:nerc2026@princeton.edu">nerc2026@princeton.edu</a></em></p>
         </div>
     </section>
 
@@ -388,8 +475,8 @@
         <h2 class="section-title">Past NERCs</h2>
         <div class="past-hosts-list">
             <ul>
-                <li><strong>2025:</strong> Cornell University</li>
-                <li><strong>2024:</strong> University of Massachusetts Amherst</li>
+                <li><strong>2025:</strong> <a href="https://nerc2025.cis.cornell.edu/" target="_blank" rel="noopener">Cornell University</a></li>
+                <li><strong>2024:</strong> <a href="https://www.umass.edu/robotics/nerc2024" target="_blank" rel="noopener">University of Massachusetts Amherst</a></li>
                 <li><strong>2023:</strong> Yale University</li>
                 <li><strong>2022:</strong> University of Massachusetts Lowell</li>
                 <li><strong>2019:</strong> University of Pennsylvania</li>
@@ -404,16 +491,26 @@
         </div>
     </section>
 
+    </main>
+
     <footer>
         <div class="footer-content">
-            <div class="footer-links">
+            <nav class="footer-links" aria-label="Footer">
+                <a href="#about">About</a>
+                <a href="#registration">Registration</a>
+                <a href="#participation">Participation</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#logistics">Travel</a>
+                <a href="#organizers">Committee</a>
                 <a href="#past-nercs">Past NERCs</a>
                 <a href="mailto:nerc2026@princeton.edu">Contact</a>
-            </div>
-            <p>&copy; 2026 Northeast Robotics Colloquium. All rights reserved.</p>
+            </nav>
+            <p>&copy; 2026 Northeast Robotics Colloquium.</p>
+            <p class="footer-tagline">Northeast Robotics Colloquium &bull; Princeton University &bull; <a href="nerc2026.ics">Add to calendar</a></p>
         </div>
     </footer>
 
+    <button id="back-to-top" aria-label="Back to top">&uarr;</button>
     <script src="script.js"></script>
 </body>
 
