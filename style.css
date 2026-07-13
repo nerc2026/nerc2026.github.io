@@ -477,8 +477,14 @@ section {
 /* Logistics / Travel */
 .logistics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .logistics-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .logistics-card {
@@ -760,8 +766,21 @@ footer {
     margin-top: 3rem;
 }
 
-.contact-note a {
-    color: var(--primary-text);
+.text-center-note a,
+.contact-note a,
+.about p a,
+.participation p a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+
+.text-center-note a:hover,
+.contact-note a:hover,
+.about p a:hover,
+.participation p a:hover {
+    color: var(--secondary-color);
 }
 
 .schedule-table th:first-child,
@@ -895,125 +914,49 @@ footer {
     background-color: var(--white);
 }
 
-.dates .section-intro {
-    text-align: center;
-    max-width: 700px;
-    margin: -2.5rem auto 3.5rem;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: var(--primary-text);
-}
-
 .key-dates-table {
-    width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    border-collapse: separate;
-    border-spacing: 0;
-    font-size: 1.05rem;
-    border: 1px solid #eaeaea;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: var(--card-shadow);
 }
 
-.key-dates-table tbody td {
-    padding: 1.25rem 1.5rem;
-    border-bottom: 1px solid #eaeaea;
-    vertical-align: middle;
-    transition: background-color 0.2s ease;
+/* Custom column sizing for Key Dates table */
+.key-dates-table th:first-child,
+.key-dates-table td:first-child {
+    width: 140px;
 }
 
-.key-dates-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-.key-dates-table tbody tr:nth-child(even) td {
-    background-color: #fafafa;
-}
-
-/* Subtle, premium hover effect on table rows */
-.key-dates-table tbody tr:not(.highlight-row):hover td {
-    background-color: rgba(245, 128, 37, 0.03);
-}
-
-.key-dates-table .col-date {
-    font-weight: 600;
+.key-dates-table td:first-child {
+    font-weight: 700;
     color: var(--primary-color);
-    white-space: nowrap;
-    width: 160px;
 }
 
-.key-dates-table .col-name {
-    font-weight: 700;
-    color: var(--secondary-color);
+.key-dates-table th:nth-child(2),
+.key-dates-table td:nth-child(2) {
     width: 240px;
-}
-
-.key-dates-table .col-desc {
-    color: var(--primary-text);
-    font-size: 0.95rem;
-}
-
-/* Softened, elegant highlight row instead of solid harsh orange */
-.key-dates-table .highlight-row td {
-    background-color: rgba(245, 128, 37, 0.06) !important;
-    border-top: 1px solid rgba(245, 128, 37, 0.15) !important;
-    border-bottom: 1px solid rgba(245, 128, 37, 0.15) !important;
-}
-
-.key-dates-table .highlight-row .col-date {
-    color: var(--primary-color) !important;
     font-weight: 700;
 }
 
-.key-dates-table .highlight-row .col-name {
-    color: var(--secondary-color) !important;
-    font-weight: 700;
-}
-
-.key-dates-table .highlight-row .col-desc {
-    color: var(--primary-text) !important;
+.key-dates-table tr.highlight td:first-child {
+    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
-    .key-dates-table, 
-    .key-dates-table tbody, 
-    .key-dates-table tr, 
-    .key-dates-table td {
-        display: block;
-        width: 100%;
+    .key-dates-table th:first-child,
+    .key-dates-table td:first-child {
+        width: auto;
     }
-    
-    .key-dates-table tr {
-        border-bottom: 1px solid #eaeaea;
-        padding: 1.25rem;
+
+    .key-dates-table th:nth-child(2),
+    .key-dates-table td:nth-child(2) {
+        width: auto;
     }
-    
-    .key-dates-table tr:last-child {
-        border-bottom: none;
-    }
-    
-    .key-dates-table td {
-        padding: 0.3rem 0 !important;
-        border: none !important;
-    }
-    
-    .key-dates-table .col-date {
-        font-size: 1.15rem;
-        color: var(--primary-color);
-        font-weight: 700;
-    }
-    
-    .key-dates-table .col-name {
-        font-size: 1.05rem;
-        font-weight: 700;
-        margin-top: 0.2rem;
-    }
-    
-    .key-dates-table .col-desc {
-        font-size: 0.95rem;
-        margin-top: 0.4rem;
-        line-height: 1.5;
-    }
+}
+
+.dates-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: var(--primary-text);
+    font-style: italic;
+    opacity: 0.85;
 }
