@@ -769,7 +769,7 @@ footer {
 .text-center-note a,
 .contact-note a,
 .about p a,
-.participation p a {
+.participation p a:not(.btn) {
     color: var(--primary-color);
     text-decoration: underline;
     font-weight: 600;
@@ -779,7 +779,7 @@ footer {
 .text-center-note a:hover,
 .contact-note a:hover,
 .about p a:hover,
-.participation p a:hover {
+.participation p a:not(.btn):hover {
     color: var(--secondary-color);
 }
 
