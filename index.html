@@ -34,7 +34,7 @@
 
     <link rel="preload" as="image" href="images/nassau_hall_autumn.jpg" media="(min-width: 769px)">
     <link rel="preload" as="image" href="images/nassau_hall_autumn_mobile.jpg" media="(max-width: 768px)">
-    <link rel="stylesheet" href="style.css?v=2.2">
+    <link rel="stylesheet" href="style.css?v=2.3">
     <link rel="preload" as="font" type="font/woff2" href="fonts/atkinson-400.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/atkinson-700.woff2" crossorigin>
     <link rel="stylesheet" href="fonts/fonts.css?v=1.1">
@@ -69,14 +69,35 @@
             "name": "Princeton Robotics, Princeton University",
             "url": "https://www.princeton.edu"
         },
-        "offers": {
-            "@type": "Offer",
-            "url": "https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138",
-            "price": "30.00",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock",
-            "validFrom": "2026-07-01"
-        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Student (including postdocs)",
+                "url": "https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138",
+                "price": "50.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2026-07-01"
+            },
+            {
+                "@type": "Offer",
+                "name": "Academic",
+                "url": "https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138",
+                "price": "75.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2026-07-01"
+            },
+            {
+                "@type": "Offer",
+                "name": "Industry",
+                "url": "https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138",
+                "price": "100.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "validFrom": "2026-07-01"
+            }
+        ],
         "performer": [
             {
                 "@type": "Person",
@@ -159,7 +180,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Student</td><td>$50</td></tr>
+                <tr><td>Student (including postdocs)</td><td>$50</td></tr>
                 <tr><td>Academic</td><td>$75</td></tr>
                 <tr><td>Industry</td><td>$100</td></tr>
             </tbody>
@@ -206,7 +227,7 @@
                 time to be activated.
             </p>
             <ul>
-                <li><strong>Submission deadline (both tracks, all materials):</strong> Thursday, August 20, 2026</li>
+                <li><strong>Submission deadline (both tracks, all materials):</strong> Thursday, August 20, 2026, 5:00 PM ET</li>
                 <li><strong>Early registration for travel funding consideration:</strong> Thursday, August 20, 2026</li>
                 <li><strong>Rising Stars Decisions:</strong> Monday, September 7, 2026</li>
                 <li><strong>Poster Decisions:</strong> Monday, September 7, 2026</li>
@@ -235,12 +256,12 @@
                 <tr>
                     <td>Thu, Aug 20</td>
                     <td>Rising Stars Submissions</td>
-                    <td>Submit abstracts and short video via OpenReview.</td>
+                    <td>Submit abstracts and short video via OpenReview by 5:00 PM ET.</td>
                 </tr>
                 <tr>
                     <td>Thu, Aug 20</td>
                     <td>General Poster Abstracts</td>
-                    <td>Submit general abstracts via OpenReview.</td>
+                    <td>Submit general abstracts via OpenReview by 5:00 PM ET.</td>
                 </tr>
                 <tr>
                     <td>Thu, Aug 20</td>
@@ -334,7 +355,7 @@
                 </tr>
                 <tr>
                     <td>9:00 AM</td>
-                    <td>Rising Stars / Submitted Talks</td>
+                    <td>Rising Stars Talks</td>
                 </tr>
                 <tr class="highlight">
                     <td>9:15 AM</td>
@@ -342,11 +363,11 @@
                 </tr>
                 <tr>
                     <td>10:00 AM</td>
-                    <td>Poster Session A, Commercials & Coffee Break (1.5 hr)</td>
+                    <td>Poster Session A & Coffee Break (1.5 hr)</td>
                 </tr>
                 <tr>
                     <td>11:30 AM</td>
-                    <td>Rising Stars / Submitted Talks</td>
+                    <td>Rising Stars Talks</td>
                 </tr>
                 <tr class="highlight">
                     <td>11:45 AM</td>
@@ -354,11 +375,11 @@
                 </tr>
                 <tr>
                     <td>12:30 PM</td>
-                    <td><strong>Lunch & Lab Tours</strong><br><small>Featuring lab tour previews and demos</small></td>
+                    <td><strong>Lunch</strong></td>
                 </tr>
                 <tr>
                     <td>1:30 PM</td>
-                    <td>Rising Stars / Submitted Talks</td>
+                    <td>Rising Stars Talks</td>
                 </tr>
                 <tr class="highlight">
                     <td>1:45 PM</td>
@@ -366,11 +387,11 @@
                 </tr>
                 <tr>
                     <td>2:30 PM</td>
-                    <td>Poster Session B, Commercials & Coffee Break (1.5 hr)</td>
+                    <td>Poster Session B & Coffee Break (1.5 hr)</td>
                 </tr>
                 <tr>
                     <td>4:00 PM</td>
-                    <td>Rising Stars / Submitted Talks</td>
+                    <td>Rising Stars Talks</td>
                 </tr>
                 <tr class="highlight">
                     <td>4:15 PM</td>
@@ -441,6 +462,10 @@
                 <p>To be considered for a travel grant, register on <a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138" target="_blank" rel="noopener">Eventbrite</a> by <strong>Thursday, August 20, 2026</strong>.</p>
                 <br>
                 <p>If a travel grant affects whether you are able to attend, note that Eventbrite provides refunds up to 7 days before the event, and we will announce awards well before then (by <strong>Monday, September 7, 2026</strong>).</p>
+            </div>
+            <div class="logistics-card logistics-card-wide">
+                <h3>Accessibility</h3>
+                <p>To request disability-related accommodations (such as sign language interpretation or captioning), please email <a href="mailto:nerc2026@princeton.edu">nerc2026@princeton.edu</a> at least one week in advance of the event. Detailed access guides for Princeton campus buildings, including entrances, elevators, and restrooms, are available from <a href="https://www.accessableusa.com/princeton-university" target="_blank" rel="noopener">Princeton's Accessibility Guides</a>.</p>
             </div>
         </div>
     </section>
