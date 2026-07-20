@@ -245,7 +245,7 @@ nav {
 
 /* Sections */
 section {
-    padding: 6rem 2rem;
+    padding: 2.5rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -570,6 +570,110 @@ section {
     color: #666;
 }
 
+/* Sponsors */
+.sponsors-intro {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.sponsor-logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.sponsor-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 1.75rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.sponsor-logo-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-logo-link img {
+    height: 52px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+}
+
+.sponsor-logo-link img[alt="Field AI"] {
+    height: 36px;
+}
+
+.sponsor-logo-link img[alt="Chewy"] {
+    height: 44px;
+}
+
+.sponsor-princeton {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    background-color: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sponsor-princeton-shield {
+    height: 110px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.sponsor-princeton-info h3 {
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.sponsor-princeton-info p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.sponsor-unit-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+}
+
+.sponsor-unit-list a {
+    display: inline-block;
+    background-color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+    transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.sponsor-unit-list a:hover {
+    color: var(--primary-text);
+    border-color: var(--primary-color);
+}
+
 /* Past NERCs */
 .past-nercs {
     background-color: var(--light-gray);
@@ -637,12 +741,12 @@ footer {
 /* Mobile and Tablet Styles */
 @media (max-width: 768px) {
     section {
-        padding: 4rem 1.5rem;
+        padding: 2.5rem 1.5rem;
     }
 
     .participation,
     .past-nercs {
-        padding: 3rem 1.5rem;
+        padding: 2.5rem 1.5rem;
     }
 
     .participation-grid,
@@ -655,6 +759,38 @@ footer {
     .participation-details,
     .logistics-card {
         padding: 1.75rem;
+    }
+
+    .sponsor-logo-row {
+        gap: 1.25rem;
+    }
+
+    .sponsor-logo-link {
+        padding: 1.25rem 1.75rem;
+    }
+
+    .sponsor-logo-link img {
+        height: 40px;
+        max-width: 180px;
+    }
+
+    .sponsor-logo-link img[alt="Field AI"] {
+        height: 28px;
+    }
+
+    .sponsor-logo-link img[alt="Chewy"] {
+        height: 34px;
+    }
+
+    .sponsor-princeton {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.75rem;
+    }
+
+    .sponsor-unit-list {
+        justify-content: center;
     }
 
     .schedule-table th,
@@ -950,13 +1086,4 @@ footer {
     .key-dates-table td:nth-child(2) {
         width: auto;
     }
-}
-
-.dates-note {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.95rem;
-    color: var(--primary-text);
-    font-style: italic;
-    opacity: 0.85;
 }
