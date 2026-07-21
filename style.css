@@ -726,23 +726,6 @@ footer {
     margin: 0 auto;
 }
 
-.footer-links {
-    margin: 2rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem 3rem;
-}
-
-.footer-links a {
-    color: #888;
-    font-weight: 400;
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-}
-
 /* Mobile and Tablet Styles */
 @media (max-width: 768px) {
     section {
