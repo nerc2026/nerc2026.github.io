@@ -593,6 +593,10 @@ section {
     margin-bottom: 3rem;
 }
 
+.sponsor-logo-row-first {
+    margin-bottom: 2rem;
+}
+
 .sponsor-logo-link {
     display: flex;
     align-items: center;
@@ -623,6 +627,26 @@ section {
 
 .sponsor-logo-link img[alt="Chewy"] {
     height: 44px;
+}
+
+.sponsor-logo-link img[alt="Robotics and AI Institute"] {
+    height: 40px;
+}
+
+.sponsor-logo-lockup {
+    gap: 0.85rem;
+}
+
+.sponsor-logo-lockup img {
+    height: 46px;
+}
+
+.sponsor-logo-lockup span {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--secondary-color);
+    white-space: nowrap;
 }
 
 .sponsor-princeton {
@@ -768,6 +792,18 @@ footer {
 
     .sponsor-logo-link img[alt="Chewy"] {
         height: 34px;
+    }
+
+    .sponsor-logo-link img[alt="Robotics and AI Institute"] {
+        height: 31px;
+    }
+
+    .sponsor-logo-lockup img {
+        height: 36px;
+    }
+
+    .sponsor-logo-lockup span {
+        font-size: 1.05rem;
     }
 
     .sponsor-princeton {
