@@ -474,6 +474,13 @@ section {
     background-color: rgba(245, 128, 37, 0.05);
 }
 
+.schedule-table a {
+    color: var(--primary-text);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 /* Logistics / Travel */
 .logistics-grid {
     display: grid;
@@ -515,6 +522,10 @@ section {
 
 .logistics-card a:hover {
     text-decoration: underline;
+}
+
+.after-party-address {
+    margin: 1rem 0;
 }
 
 /* Committee */
