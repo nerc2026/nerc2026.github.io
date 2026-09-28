@@ -884,7 +884,7 @@ section {
     border-left: none;
 }
 
-.schedule-table tr.highlight {
+.schedule-table tbody tr.highlight {
     box-shadow: inset 4px 0 0 var(--primary-color);
     background-color: rgba(245, 128, 37, 0.05);
 }
