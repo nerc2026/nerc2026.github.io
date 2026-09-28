@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
@@ -46,7 +50,9 @@ a {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
     outline: 3px solid var(--primary-color);
     outline-offset: 3px;
     border-radius: 2px;
@@ -109,7 +115,7 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: clamp(0.8rem, 2vw, 2rem);
     align-items: center;
 }
 
@@ -134,15 +140,13 @@ nav {
     background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.65) 100%), url('images/nassau_hall_autumn.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--white);
-    padding: 0 1rem;
+    padding: 8rem 1.5rem 3rem;
     max-width: 100%;
     /* Override section max-width */
     margin: 0;
@@ -150,7 +154,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     margin-bottom: 0.5rem;
     font-weight: 700;
     letter-spacing: -2px;
@@ -158,9 +162,9 @@ nav {
 }
 
 .hero .hero-subtitle {
-    font-size: clamp(1.6rem, 4.5vw, 2.5rem);
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
     color: var(--primary-color);
-    margin: 0 0 1.5rem;
+    margin: 0 0 1rem;
     font-weight: 700;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -168,7 +172,7 @@ nav {
 .hero p {
     font-size: clamp(1.1rem, 2.2vw, 1.4rem);
     max-width: 900px;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     font-weight: 400;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
@@ -270,15 +274,434 @@ section {
     border-radius: 3px;
 }
 
-/* About */
-.about p {
-    font-size: 1.15rem;
-    margin-bottom: 2rem;
+/* Attendee information */
+.attendee-info {
+    padding-top: 3rem;
+}
+
+.attendee-info .section-title,
+.poster-info .section-title,
+.old-info .section-title {
+    margin-bottom: 1.5rem;
+}
+
+.attendee-intro {
+    max-width: 780px;
+    margin: 0 auto;
     text-align: center;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #444;
+    font-size: 1.15rem;
+}
+
+.attendee-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.75rem;
+    margin: 1.5rem 0 2.5rem;
+}
+
+.attendee-info a:not(.map-button),
+.poster-info a,
+.archive-content a:not(.btn) {
+    color: var(--primary-text);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.venue-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #e1e3e5;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--light-gray);
+}
+
+.venue-info {
+    padding: 2rem;
+}
+
+.eyebrow {
+    color: var(--primary-text);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.venue-info h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.25rem;
+}
+
+.venue-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.venue-info address {
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+.map-note {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 3px solid var(--primary-color);
+    background: #fff1e5;
+    font-size: 0.95rem;
+}
+
+.map-button {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 0.85rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+.map-button:hover {
+    background: var(--primary-text);
+}
+
+.campus-map-link {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.venue-map,
+.arrival-map {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: #e8ecef;
+}
+
+.venue-map {
+    height: 100%;
+    min-height: 440px;
+}
+
+.arrival-heading {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin: 2.5rem 0 1.25rem;
+}
+
+.arrival-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.arrival-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e1e3e5;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.arrival-copy {
+    flex: 1;
+    padding: 1.75rem;
+}
+
+.arrival-copy h4,
+.accessibility-note h3 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.arrival-copy p + p {
+    margin-top: 1rem;
+}
+
+.route-links {
+    margin-top: 1.5rem;
+}
+
+.route-links li + li {
+    margin-top: 0.75rem;
+}
+
+.arrival-map {
+    height: 280px;
+}
+
+.accessibility-note {
+    margin-top: 2rem;
+    padding: 1.5rem 1.75rem;
+    border-left: 4px solid var(--primary-color);
+    background: var(--light-gray);
+}
+
+.poster-info {
+    background: var(--light-gray);
+    border-radius: 16px;
+}
+
+.poster-info > p {
+    max-width: 780px;
+    margin: 1rem auto 0;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+.poster-setup {
+    max-width: 780px;
+    margin: 1.5rem auto 0;
+    padding-left: 1.25rem;
+    list-style: disc;
+}
+
+.poster-setup li + li {
+    margin-top: 0.75rem;
+}
+
+.poster-lookup-heading {
+    margin: 2.5rem 0 0.5rem;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+}
+
+.poster-info > .poster-session-help {
+    max-width: none;
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.poster-search-controls {
+    margin-bottom: 1.5rem;
+}
+
+.poster-search-controls label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.poster-search-row {
+    display: flex;
+    gap: 0.75rem;
+}
+
+#poster-search {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font: inherit;
+    background: var(--white);
+    color: var(--text-color);
+}
+
+#poster-search-clear {
+    padding: 0.8rem 1rem;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    color: var(--text-color);
+    background: var(--white);
+    cursor: pointer;
+}
+
+#poster-search-clear:disabled {
+    color: #777;
+    cursor: default;
+}
+
+#poster-search-clear:hover:not(:disabled) {
+    border-color: var(--primary-text);
+    color: var(--primary-text);
+}
+
+#poster-search-count {
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.poster-info > .poster-search-empty {
+    max-width: none;
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    background: var(--white);
+}
+
+.poster-session {
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: var(--white);
+}
+
+.poster-session summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.poster-session summary::-webkit-details-marker {
+    display: none;
+}
+
+.poster-session summary::before {
+    content: '\25B8';
+    color: var(--primary-text);
+    font-size: 1.3rem;
+}
+
+.poster-session[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.poster-session[open] summary {
+    border-bottom: 1px solid #ddd;
+}
+
+.poster-session-label {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.poster-session-time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.poster-session-count {
+    color: #555;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.poster-list {
+    list-style: none;
+}
+
+.poster-entry {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    align-items: start;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-bottom: 1px solid #eee;
+}
+
+.poster-entry:last-child {
+    border-bottom: 0;
+}
+
+.poster-board {
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: #fff1e5;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-color);
+}
+
+.poster-board strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.poster-title {
+    font-size: 1.05rem;
+    line-height: 1.45;
+    color: var(--secondary-color);
+    overflow-wrap: anywhere;
+}
+
+.poster-authors {
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .poster-session summary {
+        padding: 1rem;
+        gap: 0.6rem;
+    }
+
+    .poster-session-count {
+        max-width: 4rem;
+    }
+
+    .poster-entry {
+        grid-template-columns: 3.25rem minmax(0, 1fr);
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+}
+
+/* Archived information */
+.old-info {
+    border-top: 1px solid #e1e3e5;
+    margin-top: 2rem;
+}
+
+.archive-panel {
+    margin-bottom: 1rem;
+    border: 1px solid #e1e3e5;
+    border-radius: 12px;
+    background: var(--light-gray);
+}
+
+.archive-panel summary {
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+}
+
+.archive-panel summary h3 {
+    display: inline;
+    margin-left: 0.5rem;
+    font-size: 1.15rem;
+}
+
+.archive-content {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.archive-content p + p {
+    margin-top: 1rem;
+}
+
+.archive-content h4 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.archive-content .btn {
+    background: var(--secondary-color);
+    box-shadow: none;
+    font-size: 0.85rem;
+    padding: 0.8rem 1.5rem;
 }
 
 /* Participation */
@@ -351,14 +774,6 @@ section {
 }
 
 /* Speakers */
-.speakers-intro {
-    font-size: 1.15rem;
-    color: #444;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3.5rem;
-}
-
 .speaker-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -481,6 +896,27 @@ section {
     text-underline-offset: 2px;
 }
 
+.program-table td {
+    vertical-align: top;
+}
+
+.program-table th:first-child,
+.program-table td:first-child {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.schedule-detail {
+    margin-top: 0.35rem;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.schedule-speakers a {
+    display: inline-block;
+    font-weight: 400;
+}
+
 /* Logistics / Travel */
 .logistics-grid {
     display: grid;
@@ -595,17 +1031,12 @@ section {
     margin: 0 auto 3rem;
 }
 
-.sponsor-logo-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
+.sponsor-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.sponsor-logo-row-first {
-    margin-bottom: 2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
 }
 
 .sponsor-logo-link {
@@ -628,7 +1059,7 @@ section {
 .sponsor-logo-link img {
     height: 52px;
     width: auto;
-    max-width: 220px;
+    max-width: min(220px, 100%);
     object-fit: contain;
 }
 
@@ -724,7 +1155,7 @@ section {
 
 .past-hosts-list ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 1.5rem;
     text-align: left;
     max-width: 1000px;
@@ -767,6 +1198,38 @@ footer {
         padding: 2.5rem 1.5rem;
     }
 
+    .venue-panel,
+    .arrival-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .venue-info,
+    .arrival-copy {
+        padding: 1.5rem;
+    }
+
+    .venue-map {
+        height: 320px;
+        min-height: 0;
+    }
+
+    .archive-content {
+        padding: 0 1rem 1rem;
+    }
+
+    .archive-content .participation-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .archive-content .participation-card,
+    .archive-content .participation-details {
+        padding: 1rem;
+    }
+
+    .archive-content .btn {
+        padding: 0.8rem 1rem;
+    }
+
     .participation,
     .past-nercs {
         padding: 2.5rem 1.5rem;
@@ -784,17 +1247,17 @@ footer {
         padding: 1.75rem;
     }
 
-    .sponsor-logo-row {
+    .sponsor-logo-grid {
         gap: 1.25rem;
     }
 
     .sponsor-logo-link {
-        padding: 1.25rem 1.75rem;
+        padding: 1.25rem 0.75rem;
     }
 
     .sponsor-logo-link img {
         height: 40px;
-        max-width: 180px;
+        max-width: min(180px, 100%);
     }
 
     .sponsor-logo-link img[alt="Field AI"] {
@@ -939,7 +1402,6 @@ footer {
 
 .text-center-note a,
 .contact-note a,
-.about p a,
 .participation p a:not(.btn) {
     color: var(--primary-color);
     text-decoration: underline;
@@ -949,7 +1411,6 @@ footer {
 
 .text-center-note a:hover,
 .contact-note a:hover,
-.about p a:hover,
 .participation p a:not(.btn):hover {
     color: var(--secondary-color);
 }

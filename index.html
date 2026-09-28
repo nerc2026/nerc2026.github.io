@@ -34,7 +34,7 @@
 
     <link rel="preload" as="image" href="images/nassau_hall_autumn.jpg" media="(min-width: 769px)">
     <link rel="preload" as="image" href="images/nassau_hall_autumn_mobile.jpg" media="(max-width: 768px)">
-    <link rel="stylesheet" href="style.css?v=2.5">
+    <link rel="stylesheet" href="style.css?v=2.7">
     <link rel="preload" as="font" type="font/woff2" href="fonts/atkinson-400.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="fonts/atkinson-700.woff2" crossorigin>
     <link rel="stylesheet" href="fonts/fonts.css?v=1.1">
@@ -51,10 +51,14 @@
         "eventStatus": "https://schema.org/EventScheduled",
         "location": {
             "@type": "Place",
-            "name": "Princeton University, Commons",
+            "name": "Princeton University, Commons Library",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 40.347278,
+                "longitude": -74.650111
+            },
             "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "11 Ivy Lane",
                 "addressLocality": "Princeton",
                 "addressRegion": "NJ",
                 "postalCode": "08540",
@@ -69,38 +73,6 @@
             "name": "Princeton Robotics, Princeton University",
             "url": "https://www.princeton.edu"
         },
-        "offers": [
-            {
-                "@type": "Offer",
-                "name": "Student (including postdocs)",
-                "url": "https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138",
-                "price": "50.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2026-07-01",
-                "priceValidUntil": "2026-09-19"
-            },
-            {
-                "@type": "Offer",
-                "name": "Academic",
-                "url": "https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138",
-                "price": "75.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2026-07-01",
-                "priceValidUntil": "2026-09-19"
-            },
-            {
-                "@type": "Offer",
-                "name": "Industry",
-                "url": "https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138",
-                "price": "100.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2026-07-01",
-                "priceValidUntil": "2026-09-19"
-            }
-        ],
         "performer": [
             {
                 "@type": "Person",
@@ -135,15 +107,13 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#participation">Participation</a></li>
-                <li><a href="#dates">Key Dates</a></li>
-                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#before-you-go">Before You Go</a></li>
+                <li><a href="#posters">Posters</a></li>
                 <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#speakers">Speakers</a></li>
                 <li><a href="#logistics">Travel</a></li>
                 <li><a href="#organizers">Committee</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138" target="_blank" rel="noopener" class="nav-cta">Register</a></li>
+                <li><a href="#old-info">Archive</a></li>
             </ul>
         </nav>
     </header>
@@ -154,145 +124,929 @@
         <p class="hero-subtitle">Northeast Robotics Colloquium</p>
         <p>Saturday, October 3, 2026 &bull; 8:00 AM &ndash; 5:00 PM &bull; Princeton University</p>
         <div class="hero-buttons">
-            <a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138" target="_blank" rel="noopener" class="btn">Register on Eventbrite</a>
-            <a href="https://openreview.net/group?id=NERC/2026/Conference" target="_blank" rel="noopener" class="btn btn-secondary">Submit on OpenReview</a>
+            <a href="#before-you-go" class="btn">Getting to the venue</a>
+            <a href="#schedule" class="btn btn-secondary">View the schedule</a>
         </div>
     </section>
 
     <main id="main" tabindex="-1">
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="section-title">About NERC</h2>
-        <p>
-            NERC 2026 will be hosted in <strong>Commons Library</strong> at <strong>Princeton University</strong> on <strong>October 3, 2026</strong>. The
-            program includes keynote talks from distinguished leaders, a Rising Stars oral presentation session, and
-            vibrant poster sessions for students and researchers. Registration is open to the entire robotics community &mdash; see the <a href="#registration">registration details</a> below.
-        </p>
+    <!-- Attendee Information -->
+    <section id="before-you-go" class="attendee-info">
+        <h2 class="section-title">What to Know Before You Go</h2>
+        <p class="attendee-intro">Join us on <strong>Saturday, October 3</strong> at Princeton University.
+            Check-in and breakfast begin at <strong>8:00 AM</strong>; opening remarks begin at <strong>8:50 AM</strong>.
+            The program ends at 5:00 PM. All times are Eastern.</p>
+        <div class="attendee-links">
+            <a href="#getting-here">Getting here</a>
+            <a href="#accessibility">Accessibility</a>
+            <a href="#posters">Poster presenters</a>
+            <a href="nerc2026.ics">Add to calendar</a>
+        </div>
+
+        <div class="venue-panel">
+            <div class="venue-info">
+                <p class="eyebrow">For all attendees</p>
+                <h3>Getting to the Venue</h3>
+                <p class="venue-name">Commons Library</p>
+                <address>Princeton University<br>Princeton, NJ</address>
+                <p>Keynotes and oral sessions take place in Commons Library, in Princeton's new engineering
+                    neighborhood on Ivy Lane, across from Princeton Stadium.</p>
+                <p class="map-note"><strong>Use this map pin to find Commons Library.</strong>
+                    The venue is the unlabeled building at 40&deg;20&prime;50.2&Prime;N, 74&deg;39&prime;00.4&Prime;W.
+                    Searching for <strong>11 Ivy Lane points to the wrong building</strong>.</p>
+                <a class="map-button" href="https://www.google.com/maps/dir/?api=1&amp;destination=40.347278%2C-74.650111"
+                    target="_blank" rel="noopener">Directions in Google Maps &rarr;</a>
+                <a class="campus-map-link" href="https://experience.arcgis.com/experience/366d5b2cddfb4aa990eb75f04aec8ade#widget_69=text:0949"
+                    target="_blank" rel="noopener">Find Commons on the Princeton campus map</a>
+            </div>
+            <iframe class="venue-map" title="Google Map pin for Commons Library at 40.347278, -74.650111"
+                src="https://www.google.com/maps?q=40.347278%2C-74.650111&amp;z=18&amp;output=embed"
+                width="600" height="440" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+
+        <h3 id="getting-here" class="arrival-heading">Plan Your Arrival</h3>
+        <div class="arrival-grid">
+            <article class="arrival-card">
+                <div class="arrival-copy">
+                    <h4>Driving &amp; parking</h4>
+                    <p>Park at <strong>Stadium Drive Garage</strong>, then walk to Commons Library.</p>
+                    <p>Saturday visitors do not need a daily parking permit. Park in a marked, unrestricted space
+                        and follow posted signs. See <a href="https://transportation.princeton.edu/parking/visiting-campus-events/visitors"
+                            target="_blank" rel="noopener">Princeton's visitor parking guidance</a>.</p>
+                    <ul class="route-links">
+                        <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Stadium+Drive+Garage%2C+Princeton%2C+NJ&amp;travelmode=driving"
+                            target="_blank" rel="noopener">Drive to Stadium Drive Garage &rarr;</a></li>
+                        <li><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Stadium+Drive+Garage%2C+Princeton%2C+NJ&amp;destination=40.347278%2C-74.650111&amp;travelmode=walking"
+                            target="_blank" rel="noopener">Walk from the garage to Commons &rarr;</a></li>
+                    </ul>
+                </div>
+                <iframe class="arrival-map" title="Google Map of Stadium Drive Garage, Princeton"
+                    src="https://www.google.com/maps?q=Stadium+Drive+Garage%2C+Princeton%2C+NJ&amp;z=15&amp;output=embed"
+                    width="600" height="280" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </article>
+            <article class="arrival-card">
+                <div class="arrival-copy">
+                    <h4>Arriving by train</h4>
+                    <p>Take a train to <strong>Princeton Junction</strong>, then transfer to the
+                        <strong>Princeton Branch (&ldquo;Dinky&rdquo;)</strong> for the five-minute ride to
+                        <strong>Princeton Station</strong> on campus. Walk from Princeton Station to Commons Library.</p>
+                    <p>Check the <a href="https://transportation.princeton.edu/getting-campus/public-transit/trains"
+                        target="_blank" rel="noopener">train connections and schedules</a> when planning your trip.</p>
+                    <ul class="route-links">
+                        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=40.342088%2C-74.658870"
+                            target="_blank" rel="noopener">Find Princeton Station in Google Maps &rarr;</a></li>
+                        <li><a href="https://www.google.com/maps/dir/?api=1&amp;origin=40.342088%2C-74.658870&amp;destination=40.347278%2C-74.650111&amp;travelmode=walking"
+                            target="_blank" rel="noopener">Walk from Princeton Station to Commons &rarr;</a></li>
+                    </ul>
+                </div>
+                <iframe class="arrival-map" title="Google Map of Princeton Station on campus"
+                    src="https://www.google.com/maps?q=40.342088%2C-74.658870&amp;z=15&amp;output=embed"
+                    width="600" height="280" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </article>
+        </div>
+        <div id="accessibility" class="accessibility-note">
+            <h3>Accessibility &amp; Arrival Questions</h3>
+            <p>For questions about reaching the venue or disability-related accommodations, contact
+                <a href="mailto:nerc2026@princeton.edu">nerc2026@princeton.edu</a>.
+                Consult <a href="https://www.accessableusa.com/princeton-university" target="_blank" rel="noopener">Princeton's Accessibility Guides</a>
+                for building entrances, elevators, and restrooms, and
+                <a href="https://transportation.princeton.edu/campus-accessibility" target="_blank" rel="noopener">campus accessibility information</a>
+                for accessible parking and transportation.</p>
+        </div>
     </section>
 
-    <!-- Registration Section -->
-    <section id="registration" class="registration">
-        <h2 class="section-title">Registration</h2>
-        <p class="reg-intro">NERC 2026 is open to researchers, students, and industry professionals. Registration is handled through Eventbrite.</p>
-        <table class="schedule-table reg-table">
+    <!-- Poster Presenter Information -->
+    <section id="posters" class="poster-info">
+        <h2 class="section-title">For Poster Presenters</h2>
+        <p>You are responsible for printing the poster on regular poster paper (please
+            <strong>NO foam boards</strong>) and the maximum allowable poster size is <strong>4'x4'</strong>.</p>
+        <ul class="poster-setup">
+            <li><strong>Morning presenters:</strong> Hang your poster between 8:00 and 8:50 AM or at the beginning
+                of your session. Take it down after your session.</li>
+            <li><strong>Afternoon presenters:</strong> Hang your poster during lunch or at the beginning
+                of your session. Take it down after your session.</li>
+        </ul>
+        <h3 class="poster-lookup-heading">Find Your Poster Session</h3>
+        <p class="poster-session-help">Saturday, October 3. All times are Eastern. Browse a session below.</p>
+        <div id="poster-search-controls" class="poster-search-controls" hidden>
+            <label for="poster-search">Search by author, poster title, or board number</label>
+            <div class="poster-search-row">
+                <input id="poster-search" type="search" placeholder="Enter a name, title, or board number"
+                    autocomplete="off" spellcheck="false" aria-describedby="poster-search-count"
+                    aria-controls="poster-session-morning poster-session-afternoon">
+                <button id="poster-search-clear" type="button" disabled>Clear</button>
+            </div>
+            <p id="poster-search-count" role="status" aria-live="polite" aria-atomic="true">100 posters across two sessions.</p>
+        </div>
+        <p id="poster-search-empty" class="poster-search-empty" hidden>No posters found. Try a different name, title, or board number.</p>
+        <details id="poster-session-morning" class="poster-session">
+            <summary>
+                <span class="poster-session-label">Morning session<span class="poster-session-time">9:45&ndash;11:15 AM</span></span>
+                <span class="poster-session-count">50 posters</span>
+            </summary>
+            <ol class="poster-list" aria-label="Morning session posters by board number">
+                <li class="poster-entry" data-board="1">
+                    <span class="poster-board">Board <strong>1</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Adaptive Illumination Control for Visual SLAM</h4>
+                        <p class="poster-authors">Yash Turkar, shekoufeh sadeghi, Karthik K Dantu</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="2">
+                    <span class="poster-board">Board <strong>2</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Deliberate Practice: Learning Robot Skills under a Budget</h4>
+                        <p class="poster-authors">Shivam Vats, Sudarshan Sunil Harithas, Mete Tuluhan Akbulut, Arvind Raghunathan, George Konidaris</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="3">
+                    <span class="poster-board">Board <strong>3</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Deform360: A Massive Multi-view Visuotactile Dataset for Deformable World Models</h4>
+                        <p class="poster-authors">George Konidaris, Hongyu Li, Wanjia Fu, Xiaoyan Cong, Zekun Li, Binghao Huang, Hanxiao Jiang, Xintong He, Yiqing Liang, Rao Fu, Tao Lu, Srinath Sridhar, Kevin A. Smith, Yunzhu Li</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="4">
+                    <span class="poster-board">Board <strong>4</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">GlobalAgent: Equipping Agents with Global Spatial Memory for Language-Guided Robot Manipulation</h4>
+                        <p class="poster-authors">George Konidaris, Sergio Orozco</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="5">
+                    <span class="poster-board">Board <strong>5</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Real-time deployment of deep-learning-based single-shot structured-light endoscopy for robotic laparoscopic depth guidance</h4>
+                        <p class="poster-authors">Wayne Wonseok Rodgers, Axel Krieger, Shuwen Wei, Jin U. Kang, Seonghoon Jang</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="6">
+                    <span class="poster-board">Board <strong>6</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Human-Robot Teaming Field Deployments: A Comparison Between Verbal and Non-verbal Communication</h4>
+                        <p class="poster-authors">Promise Osaine Ekpo, Tauhid Tanjim, Angelique Taylor</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="7">
+                    <span class="poster-board">Board <strong>7</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">RAVEN: Long-Horizon Reasoning &amp; Navigation with a Visuo-Spatio-Temporal Memory</h4>
+                        <p class="poster-authors">Chunwei Xing, Antonio Loquercio, Yixun Hu, Zhicheng Zheng, Lihan Zha, Rajdeep Singh, Omar Hossain, Dhruv Shah</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="8">
+                    <span class="poster-board">Board <strong>8</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Spatial Reasoning-Guided Subset Sampling for Multi-Robot Navigation</h4>
+                        <p class="poster-authors">Saswati Bhattacharjee, Anirban Sinha, Chinwe Ekenna, Mukulika Ghosh</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="9">
+                    <span class="poster-board">Board <strong>9</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning-Based Adaptive MPC for Spacecraft Control</h4>
+                        <p class="poster-authors">Patrick Schwartz, Abhishek Cauligi</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="10">
+                    <span class="poster-board">Board <strong>10</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Posture-Aware Approach and Viewpoint Selection for Robotic Casualty Assessment</h4>
+                        <p class="poster-authors">Zachary Bortoff, Srijal Shekhar Poojari, Kleio Baxevani, Derek Paley</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="11">
+                    <span class="poster-board">Board <strong>11</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Conversational VLM and Deep Learning Pipeline for Robotic Multi-Spectral Motor Response Classification</h4>
+                        <p class="poster-authors">Zachary Bortoff, Arian Moradi, Kleio Baxevani, Derek Paley</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="12">
+                    <span class="poster-board">Board <strong>12</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Tessellation-Enabled Soft Adaptive robot for 3D access with reduced control requirements</h4>
+                        <p class="poster-authors">Allison Earnhardt, Tuo Zhao, Jonathan Prevost, Glaucio H. Paulino, Aimy Wissa</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="13">
+                    <span class="poster-board">Board <strong>13</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Characterizing the Accuracy of an Object Detection Algorithm for a ZED 2i Camera</h4>
+                        <p class="poster-authors">Jeffrey W. Herrmann</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="14">
+                    <span class="poster-board">Board <strong>14</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Investigating NetLogo Swarm Complexity Survey User Evaluations</h4>
+                        <p class="poster-authors">Kshitij Jerath, Sriram Krishnamoorthy</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="15">
+                    <span class="poster-board">Board <strong>15</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Text to Robotic Assembly: Function-Aware Component Assignment for Multi-Component Physical Objects</h4>
+                        <p class="poster-authors">Alexander Htet Kyaw</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="16">
+                    <span class="poster-board">Board <strong>16</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">A Generalized Theorem of the Alternative for Certifiable Optimization with Redundant Constraints</h4>
+                        <p class="poster-authors">Hanna Jiamei Zhang, Alan Papalia, Michael Everett, David M. Rosen</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="17">
+                    <span class="poster-board">Board <strong>17</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Where Does the Interaction Begin? Boundaries, Breakdown, and Repair in a Café Robot Deployment</h4>
+                        <p class="poster-authors">Maria Teresa Parreira, Malte Jung, Wendy Ju</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="18">
+                    <span class="poster-board">Board <strong>18</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Examining Social Errors in a Gradually Autonomized Trash-Barrel Robot</h4>
+                        <p class="poster-authors">Maria Teresa Parreira, Wendy Ju, Emily Appleby, Sophie Shuang Cheng, Frank (Fanjun) Bu</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="19">
+                    <span class="poster-board">Board <strong>19</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">TwinKit+. An AI-augmented Tangible Interface for On-the-Fly Supervisory Control of Multi-Robot Assemblies</h4>
+                        <p class="poster-authors">Zixi Zhang, Bo Li, Marirena Kladeftira</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="20">
+                    <span class="poster-board">Board <strong>20</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Contextual Safety Reasoning and Grounding for Open-World Robots</h4>
+                        <p class="poster-authors">Zachary Ravichandran, David Snyder, Alexander Robey, Hamed Hassani, Vijay Kumar, George J. Pappas</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="21">
+                    <span class="poster-board">Board <strong>21</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Policy Overflow: Distance-to-Manifold Corrections for Conditional Flow-Matching Policies</h4>
+                        <p class="poster-authors">Edward W Staley</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="22">
+                    <span class="poster-board">Board <strong>22</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning Granular Dynamics via Graph Neural Networks</h4>
+                        <p class="poster-authors">Sonam Okuda, Rachel Holladay</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="23">
+                    <span class="poster-board">Board <strong>23</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Hear, There, or Everywhere: MEMS-Based Acoustic Vector Sensors for Sound Localisation on UAV Platforms</h4>
+                        <p class="poster-authors">Lorian Rynn Marshall, Dave Matthews, Jie Pan</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="24">
+                    <span class="poster-board">Board <strong>24</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">A Systematic Analysis Framework for Fully Handheld Manipulators</h4>
+                        <p class="poster-authors">Chaniya Jaroenkunathum</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="25">
+                    <span class="poster-board">Board <strong>25</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Motion Capture System for Navigating Locomotion in Granular Medium</h4>
+                        <p class="poster-authors">Imelda Louise Ramirez, William R. Johnson III</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="26">
+                    <span class="poster-board">Board <strong>26</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">When is property conditioning necessary? Reactive and predictive control of a soft arm</h4>
+                        <p class="poster-authors">João Damião Almeida, José Santos-Victor, Cecilia Laschi</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="27">
+                    <span class="poster-board">Board <strong>27</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Understanding Human-Robot Interaction for Residents in an Assisted-Living Facility</h4>
+                        <p class="poster-authors">Sifat Redwan Wahid</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="28">
+                    <span class="poster-board">Board <strong>28</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Perception Control Barrier Function Approach to Next-Best View-Action Planning in 3D Gaussian Maps</h4>
+                        <p class="poster-authors">Amirhossein Mollaei Khass, Athanasios Cosse, Nader Motee</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="29">
+                    <span class="poster-board">Board <strong>29</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Accelerating Reinforcement Learning of MPC Policies via a Smoothed, GPU-Parallel ADMM Solver</h4>
+                        <p class="poster-authors">Brian Plancher, Jianghan Zhang, Roland Schwan, Gabriel Fernando Bravo Palacios, Thomas Lew</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="30">
+                    <span class="poster-board">Board <strong>30</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Visibility-Constrained Nonlinear Model Predictive Control for AprilTag-Guided Mobile Robot Docking</h4>
+                        <p class="poster-authors">Srividya Srinivas, Navid Rahbariasr</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="31">
+                    <span class="poster-board">Board <strong>31</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Obstacle-Aware MPC-Guided Reinforcement Learning for Humanoid Loco-Manipulation via RL-Tuned Multiagent Path Planning</h4>
+                        <p class="poster-authors">Theo McArn</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="32">
+                    <span class="poster-board">Board <strong>32</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning to Accelerate Task and Motion Planning for Forceful Human Limb Manipulation</h4>
+                        <p class="poster-authors">Minseo Kwon, Tom Silver</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="33">
+                    <span class="poster-board">Board <strong>33</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Calibrated Kibble: Modeling Deformable Particle-Filled Bags for Robot Learning</h4>
+                        <p class="poster-authors">Jakub F. Kowalewski, Thomas Walewski</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="34">
+                    <span class="poster-board">Board <strong>34</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning Value Functions from Human Corrections as Preferences</h4>
+                        <p class="poster-authors">Anjiabei Wang, Tesca Fitzgerald</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="35">
+                    <span class="poster-board">Board <strong>35</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning-Based Model Predictive Path Integral Control for Extreme Mobility Maneuvers</h4>
+                        <p class="poster-authors">Juan Carlos Tique Rangel</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="36">
+                    <span class="poster-board">Board <strong>36</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Reality Promises: Virtual-Physical Decoupling Illusions in Mixed Reality via Invisible Mobile Robots</h4>
+                        <p class="poster-authors">Mohamed Kari, Parastoo Abtahi, Cyrus Vachha</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="37">
+                    <span class="poster-board">Board <strong>37</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Online Physics Identification for Dynamic Aerial Cable Manipulation</h4>
+                        <p class="poster-authors">Tongshu Wu</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="38">
+                    <span class="poster-board">Board <strong>38</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning Configuration-Aware Task-Space Motion Feasibility for Robotic Manipulation</h4>
+                        <p class="poster-authors">Wangyi Liu, Nilanjan Chakraborty</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="39">
+                    <span class="poster-board">Board <strong>39</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Task-oriented Grasping for Multifingered Hands via Inverse Kinematics</h4>
+                        <p class="poster-authors">Nilanjan Chakraborty, Aditya Patankar, Nicholas Baiata</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="40">
+                    <span class="poster-board">Board <strong>40</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Probabilistic Decision Programs for Planning and World Modeling</h4>
+                        <p class="poster-authors">Zachary S Siegel</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="41">
+                    <span class="poster-board">Board <strong>41</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Global Redundancy Resolution Using Learned Orthogonal Foliations</h4>
+                        <p class="poster-authors">Riddhiman Laha, Seth Hutchinson, Shravan Bhoopasamudram Krishna</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="42">
+                    <span class="poster-board">Board <strong>42</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning How to Bend: Dual-Control MPC for Cooperative Aerial Manipulation of Unknown Flexible Objects</h4>
+                        <p class="poster-authors">Edward Caleb Lopez Tarazona</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="43">
+                    <span class="poster-board">Board <strong>43</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">From Reward Weights to Physical Preferences: Terrain-Conditioned Calibration for Quadruped Locomotion</h4>
+                        <p class="poster-authors">Ji-Hyeon Yoo</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="44">
+                    <span class="poster-board">Board <strong>44</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">EchoSplat: Sonar Initialized and Restored Gaussian Splatting for Underwater Reconstruction</h4>
+                        <p class="poster-authors">Xiaoming Zhao, Yewei Huang, Mingi Jeong, Alberto Quattrini Li</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="45">
+                    <span class="poster-board">Board <strong>45</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">SPAR: Reducing Exploitability in Competitive Games with Stackelberg Protagonist-Antagonist-Referee Adversarial Reinforcement Learning</h4>
+                        <p class="poster-authors">Justin S. Wang, Duy Phuong Nguyen, Haimin Hu, Jaime Fernández Fisac</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="46">
+                    <span class="poster-board">Board <strong>46</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Evolving DADENCE for Scalable Multi-Agent Coverage</h4>
+                        <p class="poster-authors">Edwin Meriaux, Gregory Dudek</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="47">
+                    <span class="poster-board">Board <strong>47</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Developing a modular, affordable 1D linear rehabilitation platform</h4>
+                        <p class="poster-authors">Vedant Talati, Reem M. Azar, Michelle J Johnson</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="48">
+                    <span class="poster-board">Board <strong>48</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning What to Say to Your VLA: Mostly Harmless Vision Language Action Model Steering</h4>
+                        <p class="poster-authors">Hyun Joe Jeong, Gokul Swamy, Andrea Bajcsy</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="49">
+                    <span class="poster-board">Board <strong>49</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Dream to Go: Imagining Where to Look for Active Exploration and Object Search</h4>
+                        <p class="poster-authors">Jing Zhang</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="50">
+                    <span class="poster-board">Board <strong>50</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Autonomous Vision-Based Monitoring of Aquatic Ecosystems with Micro-AUVs</h4>
+                        <p class="poster-authors">Di Ni, Irene Sha, Valeria Saro-Cortes, Sneha Ramshanker, Radhika Nagpal</p>
+                    </div>
+                </li>
+            </ol>
+        </details>
+        <details id="poster-session-afternoon" class="poster-session">
+            <summary>
+                <span class="poster-session-label">Afternoon session<span class="poster-session-time">2:30&ndash;4:00 PM</span></span>
+                <span class="poster-session-count">50 posters</span>
+            </summary>
+            <ol class="poster-list" aria-label="Afternoon session posters by board number">
+                <li class="poster-entry" data-board="1">
+                    <span class="poster-board">Board <strong>1</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Learning on-Policy Learning to Specialize Lightweight Robot Policies</h4>
+                        <p class="poster-authors">Chunwei Xing, Daniel Gehrig, Vineet Pasumarti, Antonio Loquercio</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="2">
+                    <span class="poster-board">Board <strong>2</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Reinforcement Learning for Flow-Matching Policies with Density Transport</h4>
+                        <p class="poster-authors">Antonio Loquercio, Boshu Lei, Kostas Daniilidis</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="3">
+                    <span class="poster-board">Board <strong>3</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Analyzing Computational Demands on the Leo Rover during Image Processing and Navigation</h4>
+                        <p class="poster-authors">Jeffrey W. Herrmann</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="4">
+                    <span class="poster-board">Board <strong>4</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Meta-Reasoning-Driven Adaptive Fault Recovery for Autonomous Robot Navigation in ROS 2 Nav2</h4>
+                        <p class="poster-authors">Adewole Samuel Adeola</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="5">
+                    <span class="poster-board">Board <strong>5</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Exploring robot-led activities between people living with dementia and family care partners</h4>
+                        <p class="poster-authors">Jirachaya Fern Limprayoon, Brian Scassellati</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="6">
+                    <span class="poster-board">Board <strong>6</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Optimizing Team Behavior via Extremum-seeking Control in Multi-agent Reinforcement Learning</h4>
+                        <p class="poster-authors">Svar Rajankumar Patel, Kshitij Jerath, Wendy Ju</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="7">
+                    <span class="poster-board">Board <strong>7</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Multi-Agent World Models for Robust Coordination under Partial Observability and Dynamic Team Composition</h4>
+                        <p class="poster-authors">Kshitij Jerath, Akshay Kolli</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="8">
+                    <span class="poster-board">Board <strong>8</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">RoboPlayground: Democratizing Robotic Evaluation Through Structured Physical Domains</h4>
+                        <p class="poster-authors">Yi Ru Wang, Carter Ung, Evan Gubarev, Christopher Tan, Max Argus, Florian Shkurti, Homanga Bharadhwaj, Siddhartha Srinivasa, Dieter Fox</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="9">
+                    <span class="poster-board">Board <strong>9</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Addressing the Orchestration Gap in Generalist Robots via Physical Agency</h4>
+                        <p class="poster-authors">Liane Galanti</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="10">
+                    <span class="poster-board">Board <strong>10</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Environment-Aware Path Generation for Robotic Additive Manufacturing of Structures</h4>
+                        <p class="poster-authors">Mahsa Rabiei</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="11">
+                    <span class="poster-board">Board <strong>11</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Toward Minimally Invasive Transcanal Perilymph Sampling</h4>
+                        <p class="poster-authors">Ailisi Bao</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="12">
+                    <span class="poster-board">Board <strong>12</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Task- and Quality-Aware Egocentric Capture for Embodied Learning</h4>
+                        <p class="poster-authors">Chris von Csefalvay</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="13">
+                    <span class="poster-board">Board <strong>13</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">From Quasi-Static Point Contacts to Dynamic Patch Contacts using Non-Linear Complementarity Constraints</h4>
+                        <p class="poster-authors">Haroon Hublikar</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="14">
+                    <span class="poster-board">Board <strong>14</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Do Your Best, Estimate the Rest: Online Adaptation to Unknown Object Mechanics for Articulated Manipulation</h4>
+                        <p class="poster-authors">Mostafa Lotfy, Riddhiman Laha, Seth Hutchinson</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="15">
+                    <span class="poster-board">Board <strong>15</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Visual Sim-to-Real Learning for Robotic Insertion under Geometric Variations: Application to Rebar Installation</h4>
+                        <p class="poster-authors">Tao Sun, Beining Han, Szymon Rusinkiewicz, Yi Shao</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="16">
+                    <span class="poster-board">Board <strong>16</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Bayesian Multimodal Fusion for Robotic Mass Casualty Triage</h4>
+                        <p class="poster-authors">Zachary Bortoff, Arian Moradi, Srijal Shekhar Poojari, Kleio Baxevani, Derek Paley</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="17">
+                    <span class="poster-board">Board <strong>17</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Online Courteous Planning in Shared Multi-Robot Environments</h4>
+                        <p class="poster-authors">Md Ridwan Hossain Talukder</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="18">
+                    <span class="poster-board">Board <strong>18</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">SemTune: Text-Conditioned Semantic Tuning for Uncertainty-Aware MPC</h4>
+                        <p class="poster-authors">Abhishek Cauligi, Sriram Kodey</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="19">
+                    <span class="poster-board">Board <strong>19</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Topology-Guided Visual Prompting for Vision-Language-Action Policies</h4>
+                        <p class="poster-authors">Haoyang Wu, Abhinav Kumar, Dmitry Berenson</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="20">
+                    <span class="poster-board">Board <strong>20</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">TRACTION: A Foundation Policy for Force Exertion and Adaptation on Diverse Terrains  for Humanoid Robots</h4>
+                        <p class="poster-authors">Sudarshan Sunil Harithas, Srinath Sridhar, Chen Yu, Juan Borbon, Dingqi Zhang, Jiuguang Wang</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="21">
+                    <span class="poster-board">Board <strong>21</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">DefWAM: 3D Point Flow Prediction Learns Effective Goal-Conditioned Deformable Object Manipulation</h4>
+                        <p class="poster-authors">Mete Tuluhan Akbulut, George Konidaris, Srinath Sridhar, Sergio Orozco, Gaurav Singh, Ryan Duong</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="22">
+                    <span class="poster-board">Board <strong>22</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Relating Action Dispersion to Steerability in Diffusion Policies</h4>
+                        <p class="poster-authors">George Konidaris, Xinyi Wang, Skye Thompson</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="23">
+                    <span class="poster-board">Board <strong>23</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">MPC-Injection: Biasing Off-Policy RL Toward Controller-Induced Behavior Basins</h4>
+                        <p class="poster-authors">Roy Xing, Seyoung Ree, Brian Plancher</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="24">
+                    <span class="poster-board">Board <strong>24</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Fins and Wings: Designing a Bio-Inspired Flying Fish Robotic Model Organism</h4>
+                        <p class="poster-authors">Aimy Wissa, George Kopf</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="25">
+                    <span class="poster-board">Board <strong>25</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Explainable OOHRI: Communicating Robot Capabilities and Limitations as Augmented Reality Affordances</h4>
+                        <p class="poster-authors">Lauren W. Wang, Mohamed Kari, Parastoo Abtahi</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="26">
+                    <span class="poster-board">Board <strong>26</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Underwater Robotic Swarms</h4>
+                        <p class="poster-authors">Di Ni</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="27">
+                    <span class="poster-board">Board <strong>27</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Unblock Me! Human-in-the-Loop Skill Practice in Dangerous and Irreversible Environments</h4>
+                        <p class="poster-authors">Tom Silver, Josh Roy</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="28">
+                    <span class="poster-board">Board <strong>28</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Interactive Information Gathering for Long-Horizon Manipulation under Uncertainty</h4>
+                        <p class="poster-authors">Rachel Holladay, Linfei Yuan</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="29">
+                    <span class="poster-board">Board <strong>29</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Integrated Computer Vision and Multi-Sensor Perception for Autonomous Quadrupedal Navigation</h4>
+                        <p class="poster-authors">Saiyuj Kobla, Brian Chen</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="30">
+                    <span class="poster-board">Board <strong>30</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">End-User Scenario Authoring for Autonomous Cross-Embodiment Robotic Training</h4>
+                        <p class="poster-authors">Angelique Taylor, Sai Rachana Kandikattu, Jonathan Isaac Segal, Laura Stegner</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="31">
+                    <span class="poster-board">Board <strong>31</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Neuromorphic Decision Dynamics for Deadlock-Free, Safe, and Fluid Navigation in Congested Environments</h4>
+                        <p class="poster-authors">Himani Sinhmar</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="32">
+                    <span class="poster-board">Board <strong>32</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Bergen Anthropomorphic Robotic Arm Assessment (BARAA): A Classification Benchmark for Assessing the Mechanical Ability of Anthropomorphic Arms</h4>
+                        <p class="poster-authors">Tyler Rydell, Julia Licameli, Nadia Kim, Semih Coban, Tatiana Jara, Yolanda Sheppard</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="33">
+                    <span class="poster-board">Board <strong>33</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Screw-based Representation of Task Space Motion Constraints</h4>
+                        <p class="poster-authors">Nilanjan Chakraborty, Dasharadhan Mahalingam, Aditya Patankar</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="34">
+                    <span class="poster-board">Board <strong>34</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Is Footage from TrashBot Deployment Enough to Extract Norms?</h4>
+                        <p class="poster-authors">Ayelet Maltz, Matt Franchi</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="35">
+                    <span class="poster-board">Board <strong>35</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Can Simulation Help Robots Predict Human Fairness Perceptions?</h4>
+                        <p class="poster-authors">Austin Narcomey, Marynel Vázquez</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="36">
+                    <span class="poster-board">Board <strong>36</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">HINT-Blimp: Human INTent Inference from Multimodal Cues for Robotic Blimps</h4>
+                        <p class="poster-authors">Subhadeep Koley</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="37">
+                    <span class="poster-board">Board <strong>37</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Field-Adaptive Graph Representation for Navigation, Manipulation, and Finite-Duration Fields</h4>
+                        <p class="poster-authors">Karthik K Dantu, Charuvahan Adhivarahan</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="38">
+                    <span class="poster-board">Board <strong>38</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Failure-Aware Planning for Multi-Robot Multi-Goal Navigation in Risky Environments</h4>
+                        <p class="poster-authors">Morayo Ogunsina, Abhishek Paudel, Gregory J. Stein</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="39">
+                    <span class="poster-board">Board <strong>39</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Scalable and Reliable Coordination in Embodied Intelligent Networks</h4>
+                        <p class="poster-authors">Zirui Xu</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="40">
+                    <span class="poster-board">Board <strong>40</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">BlueKoi: Agility through unpowered turns in a fish-inspired robot</h4>
+                        <p class="poster-authors">Irene Sha</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="41">
+                    <span class="poster-board">Board <strong>41</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Controlled Environment Prediction Using Probabilistic Modeling</h4>
+                        <p class="poster-authors">Jose Toribio</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="42">
+                    <span class="poster-board">Board <strong>42</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Calibrated Vision-Language Perception for Risk-Aware Action Selection in Urban Driving</h4>
+                        <p class="poster-authors">Malika Buribayeva, Qiuyu Tang, Kaier Liang, Aparna Bharati, Cristian Ioan Vasile</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="S-1">
+                    <span class="poster-board">Board <strong>S-1</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Human Universal Grasping</h4>
+                        <p class="poster-authors">Kevin Yuanbo Wu, Tianxing Zhou, Isaac Tu, Billy Yan, Irmak Guzey, David Fouhey, Dandan Shan, Lerrel Pinto</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="S-2">
+                    <span class="poster-board">Board <strong>S-2</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">YOR: A Whole-Body Mobile Manipulator for Teleoperation and Robot Learning</h4>
+                        <p class="poster-authors">Kevin Yuanbo Wu, Lerrel Pinto, Kanad Patel, Dhawal Kabra, Neer Chandrakant Patel, Kenneth Ma, Zichen Jeff Cui</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="S-3">
+                    <span class="poster-board">Board <strong>S-3</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">AI Interfaces: Easing Access to Field Robots</h4>
+                        <p class="poster-authors">Eric Judys, Utku Melemetci, Kirstin H Petersen</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="S-4">
+                    <span class="poster-board">Board <strong>S-4</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">From Pool to Pond: Deploying Cooperative Robots for Environmental Remediation</h4>
+                        <p class="poster-authors">Kirstin H Petersen, Aidan Chan, Elias Xu</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="S-5">
+                    <span class="poster-board">Board <strong>S-5</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">A Low-Cost Modular Robotic System for Automated Environmental DNA Sampling</h4>
+                        <p class="poster-authors">Kirstin H Petersen, Xinrong Zhu, Stephan Wagner</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="S-6">
+                    <span class="poster-board">Board <strong>S-6</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">Interfacial Pumping on a Lab-Scale USV for Efficient Microplastics Collection</h4>
+                        <p class="poster-authors">Kirstin H Petersen, Stephan Wagner</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="S-7">
+                    <span class="poster-board">Board <strong>S-7</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">A Robotic System for Invasive Aquatic Biomass Removal</h4>
+                        <p class="poster-authors">Kirstin H Petersen, Ming Huang</p>
+                    </div>
+                </li>
+                <li class="poster-entry" data-board="S-8">
+                    <span class="poster-board">Board <strong>S-8</strong></span>
+                    <div class="poster-description">
+                        <h4 class="poster-title">A Low-Cost Amphibious Robot for Mapping and Monitoring Freshwater Wetlands</h4>
+                        <p class="poster-authors">Kirstin H Petersen, Hilario Esparza, Ryan Brynjolfson</p>
+                    </div>
+                </li>
+            </ol>
+        </details>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <h2 class="section-title">Schedule</h2>
+        <table class="schedule-table program-table">
             <thead>
                 <tr>
-                    <th scope="col">Registration Type</th>
-                    <th scope="col">Rate</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Student (including postdocs)</td><td>$50</td></tr>
-                <tr><td>Academic</td><td>$75</td></tr>
-                <tr><td>Industry</td><td>$100</td></tr>
-            </tbody>
-        </table>
-        <p class="text-center-note">Registration closes <strong>Saturday, September 19, 2026</strong>. Tickets are refundable up to 7 days before the event. NERC 2026 is an in-person, full-day program (8:00 AM &ndash; 5:00 PM ET) at Princeton University.</p>
-        <p class="text-center-note">Questions? Contact us at <a href="mailto:nerc2026@princeton.edu">nerc2026@princeton.edu</a>.</p>
-        <p class="btn-row">
-            <a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138" target="_blank" rel="noopener" class="btn">Register on Eventbrite</a>
-        </p>
-        <p class="text-center-note"><a href="nerc2026.ics">Add NERC 2026 to your calendar (.ics)</a></p>
-    </section>
-
-    <!-- Call for Participation -->
-    <section id="participation" class="participation">
-        <h2 class="section-title">Call for Participation</h2>
-        <div class="participation-grid">
-            <div class="participation-card">
-                <h3>Rising Stars & Oral Talks</h3>
-                <p>We invite PhD students and postdocs to apply for our <strong>Rising Stars</strong> session. This
-                    is a prestigious opportunity to orally present your research to the entire colloquium.
-                    <br><br>Applicants should submit an abstract (see format below), a video presentation
-                    summarizing their work (up to 2 minutes), and a curriculum vitae. Selected researchers will be
-                    invited to give a short spotlight talk during the colloquium.
-                </p>
-            </div>
-            <div class="participation-card">
-                <h3>Posters & Demos</h3>
-                <p>Present your latest work during our interactive poster sessions. We welcome abstracts describing
-                    recently published work, preliminary results, ongoing research, and demonstrations. Accepted
-                    abstracts will be presented as posters.
-                    <br><br>You are responsible for printing the poster on regular poster paper (please
-                    <strong>NO foam boards</strong>) and the maximum allowable poster size is <strong>4'x4'</strong>.
-                </p>
-            </div>
-        </div>
-        <div class="participation-details">
-            <h3>Abstract Format and Submission</h3>
-            <p>Abstracts for both tracks should be submitted in plain text (no PDF). Abstracts may be at most
-                <strong>5000 characters</strong> and should aim for <strong>2&ndash;3 paragraphs</strong>. An
-                abstract should describe the work, its significance, and what will be presented at the colloquium.
-                If the work has been previously published, the abstract should say so and name the venue.
-            </p>
-            <p>Submissions are handled through
-                <a href="https://openreview.net/group?id=NERC/2026/Conference">OpenReview</a>. If you do not
-                already have an OpenReview account, create one well before the deadline; new profiles can take
-                time to be activated.
-            </p>
-            <p>The submission deadline for both tracks, including all materials, is
-                <strong>Thursday, August 20, 2026, 5:00 PM ET</strong>. Decision and travel funding dates are
-                listed under <a href="#dates">Key Dates</a>.
-            </p>
-            <p class="btn-row">
-                <a href="https://openreview.net/group?id=NERC/2026/Conference" target="_blank" rel="noopener" class="btn">Submit on
-                    OpenReview</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- Key Dates Section -->
-    <section id="dates" class="dates">
-        <h2 class="section-title">Key Dates</h2>
-        <table class="schedule-table key-dates-table">
-            <thead>
-                <tr>
-                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
                     <th scope="col">Event</th>
-                    <th scope="col">Details</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Thu, Aug 20</td>
-                    <td>Rising Stars Submissions</td>
-                    <td>Submit abstracts and short video via OpenReview by 5:00 PM ET.</td>
-                </tr>
-                <tr>
-                    <td>Thu, Aug 20</td>
-                    <td>General Poster Abstracts</td>
-                    <td>Submit general abstracts via OpenReview by 5:00 PM ET.</td>
-                </tr>
-                <tr>
-                    <td>Thu, Aug 20</td>
-                    <td>Travel Funding Applications</td>
-                    <td>Apply for student/postdoc travel support via Eventbrite.</td>
-                </tr>
-                <tr>
-                    <td>Mon, Sep 7</td>
-                    <td>Rising Stars Decisions</td>
-                    <td>Acceptance notifications emailed to oral presenter applicants.</td>
-                </tr>
-                <tr>
-                    <td>Mon, Sep 7</td>
-                    <td>Poster Decisions</td>
-                    <td>Acceptance decisions for general poster session emailed.</td>
-                </tr>
-                <tr>
-                    <td>Mon, Sep 7</td>
-                    <td>Travel Funding Decisions</td>
-                    <td>Notifications of travel grant awards and support emailed.</td>
-                </tr>
-                <tr>
-                    <td>Sat, Sep 19</td>
-                    <td>Registration Closes</td>
-                    <td>Last day to register via Eventbrite.</td>
+                    <td>8:00 AM</td>
+                    <td>Check-in &amp; Breakfast</td>
                 </tr>
                 <tr class="highlight">
-                    <td>Sat, Oct 3</td>
-                    <td>Colloquium Day!</td>
-                    <td>Full-day colloquium event held at Princeton University.</td>
+                    <td>8:50 AM</td>
+                    <td><strong>Opening Remarks</strong></td>
+                </tr>
+                <tr class="highlight">
+                    <td>9:00 AM</td>
+                    <td>
+                        <strong>Keynote: <a href="https://www.civil.columbia.edu/content/zhengbo-zou" target="_blank" rel="noopener">Zhengbo Zou</a></strong>
+                        <p class="schedule-detail">Columbia University</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9:45 AM</td>
+                    <td><strong><a href="#poster-session-morning">Poster Session 1</a></strong></td>
+                </tr>
+                <tr>
+                    <td>11:15 AM</td>
+                    <td>
+                        <strong>Rising Stars Session 1: Robot Epistemology</strong>
+                        <p class="schedule-detail schedule-speakers">
+                            <a href="https://tabula-rosa.github.io/" target="_blank" rel="noopener">Tabitha Lee</a>,
+                            <a href="https://yaqi-xie.me/" target="_blank" rel="noopener">Yaqi Xie</a>,
+                            <a href="https://kensukenk.github.io/" target="_blank" rel="noopener">Ken Nakamura</a>,
+                            <a href="https://dasnyder5.github.io/" target="_blank" rel="noopener">David Snyder</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12:00 PM</td>
+                    <td><strong>Lunch</strong></td>
+                </tr>
+                <tr class="highlight">
+                    <td>1:00 PM</td>
+                    <td>
+                        <strong>Keynote: <a href="https://www.ece.cornell.edu/faculty-directory/kirstin-hagelskjaer-petersen" target="_blank" rel="noopener">Kirstin H. Petersen</a></strong>
+                        <p class="schedule-detail">Cornell University</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1:45 PM</td>
+                    <td>
+                        <strong>Rising Stars Session 2: Full-Stack Robot Adaptability</strong>
+                        <p class="schedule-detail schedule-speakers">
+                            <a href="https://meche.mit.edu/people/staff/stef_k%40mit.edu" target="_blank" rel="noopener">Stefania Konstantinidi</a>,
+                            <a href="https://wang5056.github.io/" target="_blank" rel="noopener">Jue Wang</a>,
+                            <a href="https://www.cs.cornell.edu/~madan/" target="_blank" rel="noopener">Rishabh Madan</a>,
+                            <a href="https://ndennler.github.io/" target="_blank" rel="noopener">Nathan Dennler</a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2:30 PM</td>
+                    <td><strong><a href="#poster-session-afternoon">Poster Session 2</a></strong></td>
+                </tr>
+                <tr class="highlight">
+                    <td>4:00 PM</td>
+                    <td>
+                        <strong>Keynote: <a href="https://www.linkedin.com/in/alberto-rodriguez-5457661a8" target="_blank" rel="noopener">Alberto Rodriguez</a></strong>
+                        <p class="schedule-detail">Boston Dynamics</p>
+                    </td>
+                </tr>
+                <tr class="highlight">
+                    <td>4:45 PM</td>
+                    <td><strong>Closing Remarks</strong></td>
+                </tr>
+                <tr>
+                    <td>Afterward</td>
+                    <td>
+                        <strong>Informal After-Party at the Ivy Inn</strong>
+                        <p class="schedule-detail">248 Nassau Street &bull;
+                            <a href="https://www.google.com/maps/dir/?api=1&amp;origin=40.347278%2C-74.650111&amp;destination=Ivy+Inn%2C+248+Nassau+Street%2C+Princeton%2C+NJ+08542&amp;travelmode=walking"
+                                target="_blank" rel="noopener">Walking directions from Commons</a>
+                        </p>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -301,21 +1055,7 @@
     <!-- Speakers Section -->
     <section id="speakers" class="speakers">
         <h2 class="section-title">Invited Speakers</h2>
-        <p class="speakers-intro">
-            Our program aims to cover a diverse range of robotics specialties. We feature speakers from both academia
-            and industry, with a special focus on recruiting distinguished voices from institutions across the
-            Northeast and beyond.
-        </p>
         <div class="speaker-grid">
-            <div class="speaker-card">
-                <img src="images/speakers/petersen.jpg" alt="Kirstin H. Petersen" class="speaker-img" width="280" height="280" loading="lazy" decoding="async">
-                <div class="speaker-info">
-                    <h3 class="speaker-name"><a href="https://www.ece.cornell.edu/faculty-directory/kirstin-hagelskjaer-petersen"
-                            target="_blank" rel="noopener">Kirstin H. Petersen</a></h3>
-                    <p class="speaker-title">Associate Professor, Electrical and Computer Engineering</p>
-                    <p class="speaker-affil">Cornell University</p>
-                </div>
-            </div>
             <div class="speaker-card">
                 <img src="images/speakers/zou.jpg" alt="Zhengbo Zou" class="speaker-img" width="280" height="280" loading="lazy" decoding="async">
                 <div class="speaker-info">
@@ -323,6 +1063,15 @@
                             target="_blank" rel="noopener">Zhengbo Zou</a></h3>
                     <p class="speaker-title">Assistant Professor, Civil Engineering and Engineering Mechanics</p>
                     <p class="speaker-affil">Columbia University</p>
+                </div>
+            </div>
+            <div class="speaker-card">
+                <img src="images/speakers/petersen.jpg" alt="Kirstin H. Petersen" class="speaker-img" width="280" height="280" loading="lazy" decoding="async">
+                <div class="speaker-info">
+                    <h3 class="speaker-name"><a href="https://www.ece.cornell.edu/faculty-directory/kirstin-hagelskjaer-petersen"
+                            target="_blank" rel="noopener">Kirstin H. Petersen</a></h3>
+                    <p class="speaker-title">Associate Professor, Electrical and Computer Engineering</p>
+                    <p class="speaker-affil">Cornell University</p>
                 </div>
             </div>
             <div class="speaker-card">
@@ -337,112 +1086,17 @@
         </div>
     </section>
 
-    <!-- Schedule Section -->
-    <section id="schedule" class="schedule">
-        <h2 class="section-title">Schedule</h2>
-        <p class="text-center-note">Tentative Schedule for <strong>Saturday, October 3,
-                2026</strong>. Details subject to change.</p>
-
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th scope="col">Time</th>
-                    <th scope="col">Event</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>8:00 AM</td>
-                    <td>Registration (and Breakfast)</td>
-                </tr>
-                <tr class="highlight">
-                    <td>8:50 AM</td>
-                    <td><strong>Opening Remarks</strong><br><small>Featuring Princeton Robotics Lab videos</small></td>
-                </tr>
-                <tr class="highlight">
-                    <td>9:00 AM</td>
-                    <td><strong>Keynote Speaker</strong><br><small>40 min talk + 5 min Q&A</small></td>
-                </tr>
-                <tr>
-                    <td>9:45 AM</td>
-                    <td>Poster Session (1.5 hr)</td>
-                </tr>
-                <tr>
-                    <td>11:15 AM</td>
-                    <td>Rising Stars (45 min)</td>
-                </tr>
-                <tr>
-                    <td>12:00 PM</td>
-                    <td><strong>Lunch</strong></td>
-                </tr>
-                <tr class="highlight">
-                    <td>1:00 PM</td>
-                    <td><strong>Keynote Speaker</strong><br><small>40 min talk + 5 min Q&A</small></td>
-                </tr>
-                <tr>
-                    <td>1:45 PM</td>
-                    <td>Rising Stars (45 min)</td>
-                </tr>
-                <tr>
-                    <td>2:30 PM</td>
-                    <td>Poster Session (1.5 hr)</td>
-                </tr>
-                <tr class="highlight">
-                    <td>4:00 PM</td>
-                    <td><strong>Keynote Speaker</strong><br><small>40 min talk + 5 min Q&A</small></td>
-                </tr>
-                <tr class="highlight">
-                    <td>4:45 PM</td>
-                    <td><strong>Closing Remarks</strong></td>
-                </tr>
-                <tr>
-                    <td>Afterward</td>
-                    <td><strong>Informal After-Party at the Ivy Inn</strong><br><small>248 Nassau Street &bull;
-                        <a href="https://www.google.com/maps/dir/?api=1&amp;origin=11+Ivy+Lane%2C+Princeton%2C+NJ+08540&amp;destination=Ivy+Inn%2C+248+Nassau+Street%2C+Princeton%2C+NJ+08542&amp;travelmode=walking"
-                            target="_blank" rel="noopener">Walking directions from Commons</a></small></td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Logistics Section -->
+    <!-- Travel Details -->
     <section id="logistics" class="logistics">
-        <h2 class="section-title">Travel & Logistics</h2>
+        <h2 class="section-title">More Travel Information</h2>
         <div class="logistics-grid">
-            <div class="logistics-card">
-                <h3>Venue</h3>
-                <p>Princeton University<br>
-                    <strong>Commons Library</strong><br>
-                    11 Ivy Lane<br>
-                    Princeton, NJ 08540</p>
-                <br>
-                <p>The main events (keynotes and oral sessions) will be held in
-                    <a href="https://experience.arcgis.com/experience/366d5b2cddfb4aa990eb75f04aec8ade#widget_69=text:0949"
-                        target="_blank" rel="noopener"><strong>Commons Library</strong></a>, part of Princeton's new engineering neighborhood on Ivy Lane,
-                    across from Princeton Stadium.</p>
-            </div>
             <div class="logistics-card">
                 <h3>After-Party</h3>
                 <p>Join us for an informal after-party at the <strong>Ivy Inn</strong> after the program.</p>
                 <p class="after-party-address">248 Nassau Street<br>
                     Princeton, NJ 08542</p>
-                <p><a href="https://www.google.com/maps/dir/?api=1&amp;origin=11+Ivy+Lane%2C+Princeton%2C+NJ+08540&amp;destination=Ivy+Inn%2C+248+Nassau+Street%2C+Princeton%2C+NJ+08542&amp;travelmode=walking"
+                <p><a href="https://www.google.com/maps/dir/?api=1&amp;origin=40.347278%2C-74.650111&amp;destination=Ivy+Inn%2C+248+Nassau+Street%2C+Princeton%2C+NJ+08542&amp;travelmode=walking"
                         target="_blank" rel="noopener">Get walking directions from Commons &rarr;</a></p>
-            </div>
-            <div class="logistics-card">
-                <h3>Getting Here</h3>
-                <p><strong>By Train:</strong> The "Dinky" train connects Princeton Station (on campus) to Princeton
-                    Junction (NJ Transit Northeast Corridor). Commons Library is about a 15-minute walk from Princeton
-                    Station. Princeton Junction has NJ Transit and Amtrak connections to New York City, Philadelphia,
-                    and other cities along the Northeast Corridor.</p>
-                <br>
-                <p><strong>By Car:</strong> Visitor parking is available at Stadium Drive Garage on campus. Visitors
-                    parking in the garage are asked to register for a daily visitor permit. Registration can be
-                    completed <a href="https://vpermit.com/princeton/ClaimableEvents/Claim?code=VISITOR%20PARKING"
-                        target="_blank" rel="noopener">online</a> or at the garage on the day of your visit.</p>
-                <br>
-                <p><strong>By Plane:</strong> Newark Liberty International Airport (EWR) is approx. 1 hour away by car
-                    or train. Philadelphia International Airport (PHL) is approx. 1 hour away by car.</p>
             </div>
             <div class="logistics-card">
                 <h3>Accommodation</h3>
@@ -463,17 +1117,13 @@
                             target="_blank" rel="noopener">Hyatt Place Princeton</a> [~8-12 minute Uber/drive, 3.5 miles]</li>
                 </ul>
             </div>
-            <div class="logistics-card">
-                <h3>Travel Support</h3>
-                <p>A limited number of travel grants are available to help cover lodging and transportation costs. Applications are open to students and postdocs from institutions across the Northeast who are participating or presenting at the colloquium.</p>
-                <br>
-                <p>To be considered for a travel grant, register on <a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138" target="_blank" rel="noopener">Eventbrite</a> by <strong>Thursday, August 20, 2026</strong>.</p>
-                <br>
-                <p>If a travel grant affects whether you are able to attend, note that Eventbrite provides refunds up to 7 days before the event, and we will announce awards well before then (by <strong>Monday, September 7, 2026</strong>).</p>
-            </div>
             <div class="logistics-card logistics-card-wide">
-                <h3>Accessibility</h3>
-                <p>To request disability-related accommodations (such as sign language interpretation or captioning), please email <a href="mailto:nerc2026@princeton.edu">nerc2026@princeton.edu</a> at least one week in advance of the event. Detailed access guides for Princeton campus buildings, including entrances, elevators, and restrooms, are available from <a href="https://www.accessableusa.com/princeton-university" target="_blank" rel="noopener">Princeton's Accessibility Guides</a>.</p>
+                <h3>Flying to Princeton</h3>
+                <p>Newark Liberty International Airport (EWR) and Philadelphia International Airport (PHL)
+                    serve the region. Plan your onward trip using
+                    <a href="https://transportation.princeton.edu/getting-campus/public-transit/trains"
+                        target="_blank" rel="noopener">Princeton's rail travel guide</a>, which includes connections
+                    from both airports.</p>
             </div>
         </div>
     </section>
@@ -550,7 +1200,7 @@
     <section id="sponsors" class="sponsors">
         <h2 class="section-title">Sponsors</h2>
         <p class="sponsors-intro">NERC 2026 is made possible by the generous support of our sponsors.</p>
-        <div class="sponsor-logo-row sponsor-logo-row-first">
+        <div class="sponsor-logo-grid">
             <a href="https://bostondynamics.com/" target="_blank" rel="noopener" class="sponsor-logo-link">
                 <img src="images/sponsors/boston-dynamics.svg" alt="Boston Dynamics" loading="lazy" decoding="async">
             </a>
@@ -560,14 +1210,8 @@
             <a href="https://www.chewy.com/" target="_blank" rel="noopener" class="sponsor-logo-link">
                 <img src="images/sponsors/chewy.svg" alt="Chewy" loading="lazy" decoding="async">
             </a>
-        </div>
-        <div class="sponsor-logo-row">
             <a href="https://rai-inst.com/" target="_blank" rel="noopener" class="sponsor-logo-link">
                 <img src="images/sponsors/rai-institute.svg" alt="Robotics and AI Institute" loading="lazy" decoding="async">
-            </a>
-            <a href="https://vulcanrobotics.ai/" target="_blank" rel="noopener" class="sponsor-logo-link sponsor-logo-lockup">
-                <img src="images/sponsors/vulcan-robotics.png" alt="Vulcan Robotics" loading="lazy" decoding="async">
-                <span>Vulcan Robotics</span>
             </a>
         </div>
         <div class="sponsor-princeton">
@@ -586,6 +1230,147 @@
                 </ul>
             </div>
         </div>
+    </section>
+
+    <!-- Archived Registration and Submission Information -->
+    <section id="old-info" class="old-info">
+        <h2 class="section-title">Registration &amp; Submission Archive</h2>
+        <p class="text-center-note">Registration and abstract submissions are closed. Previous deadlines, fees,
+            and application details are kept here for reference.</p>
+        <details id="registration" class="archive-panel">
+            <summary><h3>Registration</h3></summary>
+            <div class="archive-content">
+                <p class="reg-intro">NERC 2026 is open to researchers, students, and industry professionals. Registration was handled through Eventbrite.</p>
+                <table class="schedule-table reg-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Registration Type</th>
+                            <th scope="col">Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Student (including postdocs)</td><td>$50</td></tr>
+                        <tr><td>Academic</td><td>$75</td></tr>
+                        <tr><td>Industry</td><td>$100</td></tr>
+                    </tbody>
+                </table>
+                <p class="text-center-note">Registration closed <strong>Saturday, September 19, 2026</strong>. Tickets are refundable up to 7 days before the event. NERC 2026 is an in-person, full-day program (8:00 AM &ndash; 5:00 PM ET) at Princeton University.</p>
+                <p class="text-center-note">Questions? Contact us at <a href="mailto:nerc2026@princeton.edu">nerc2026@princeton.edu</a>.</p>
+                <p class="btn-row">
+                    <a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138" target="_blank" rel="noopener" class="btn">View the Eventbrite page</a>
+                </p>
+            </div>
+        </details>
+        <details id="participation" class="archive-panel">
+            <summary><h3>Call for Participation &amp; Submissions</h3></summary>
+            <div class="archive-content">
+                <div class="participation-grid">
+                    <div class="participation-card">
+                        <h4>Rising Stars & Oral Talks</h4>
+                        <p>We invite PhD students and postdocs to apply for our <strong>Rising Stars</strong> session. This
+                            is a prestigious opportunity to orally present your research to the entire colloquium.
+                            <br><br>Applicants should submit an abstract (see format below), a video presentation
+                            summarizing their work (up to 2 minutes), and a curriculum vitae. Selected researchers will be
+                            invited to give a short spotlight talk during the colloquium.
+                        </p>
+                    </div>
+                    <div class="participation-card">
+                        <h4>Posters & Demos</h4>
+                        <p>Present your latest work during our interactive poster sessions. We welcome abstracts describing
+                            recently published work, preliminary results, ongoing research, and demonstrations. Accepted
+                            abstracts will be presented as posters.
+                        </p>
+                    </div>
+                </div>
+                <div class="participation-details">
+                    <h4>Abstract Format and Submission</h4>
+                    <p>Abstracts for both tracks should be submitted in plain text (no PDF). Abstracts may be at most
+                        <strong>5000 characters</strong> and should aim for <strong>2&ndash;3 paragraphs</strong>. An
+                        abstract should describe the work, its significance, and what will be presented at the colloquium.
+                        If the work has been previously published, the abstract should say so and name the venue.
+                    </p>
+                    <p>Submissions are handled through
+                        <a href="https://openreview.net/group?id=NERC/2026/Conference">OpenReview</a>. If you do not
+                        already have an OpenReview account, create one well before the deadline; new profiles can take
+                        time to be activated.
+                    </p>
+                    <p>The submission deadline for both tracks, including all materials, is
+                        <strong>Thursday, August 20, 2026, 5:00 PM ET</strong>. Decision and travel funding dates are
+                        listed under <a href="#dates">Key Dates</a>.
+                    </p>
+                    <p class="btn-row">
+                        <a href="https://openreview.net/group?id=NERC/2026/Conference" target="_blank" rel="noopener" class="btn">View the OpenReview page</a>
+                    </p>
+                </div>
+            </div>
+        </details>
+        <details id="dates" class="archive-panel">
+            <summary><h3>Key Dates</h3></summary>
+            <div class="archive-content">
+                <table class="schedule-table key-dates-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Event</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thu, Aug 20</td>
+                            <td>Rising Stars Submissions</td>
+                            <td>Submit abstracts and short video via OpenReview by 5:00 PM ET.</td>
+                        </tr>
+                        <tr>
+                            <td>Thu, Aug 20</td>
+                            <td>General Poster Abstracts</td>
+                            <td>Submit general abstracts via OpenReview by 5:00 PM ET.</td>
+                        </tr>
+                        <tr>
+                            <td>Thu, Aug 20</td>
+                            <td>Travel Funding Applications</td>
+                            <td>Apply for student/postdoc travel support via Eventbrite.</td>
+                        </tr>
+                        <tr>
+                            <td>Mon, Sep 7</td>
+                            <td>Rising Stars Decisions</td>
+                            <td>Acceptance notifications emailed to oral presenter applicants.</td>
+                        </tr>
+                        <tr>
+                            <td>Mon, Sep 7</td>
+                            <td>Poster Decisions</td>
+                            <td>Acceptance decisions for general poster session emailed.</td>
+                        </tr>
+                        <tr>
+                            <td>Mon, Sep 7</td>
+                            <td>Travel Funding Decisions</td>
+                            <td>Notifications of travel grant awards and support emailed.</td>
+                        </tr>
+                        <tr>
+                            <td>Sat, Sep 19</td>
+                            <td>Registration Closes</td>
+                            <td>Last day to register via Eventbrite.</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>Sat, Oct 3</td>
+                            <td>Colloquium Day!</td>
+                            <td>Full-day colloquium event held at Princeton University.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+        <details id="travel-support" class="archive-panel">
+            <summary><h3>Travel Support Applications</h3></summary>
+            <div class="archive-content">
+                <p>Travel grant applications were open to students and postdocs from institutions across the
+                    Northeast participating or presenting at the colloquium, to help cover lodging and transportation.</p>
+                <p>The application deadline was <strong>Thursday, August 20, 2026</strong>, through
+                    <a href="https://www.eventbrite.com/e/northeast-robotics-colloquium-nerc-2026-tickets-1993696245138"
+                        target="_blank" rel="noopener">Eventbrite</a>. Decisions were scheduled for
+                    <strong>Monday, September 7, 2026</strong>.</p>
+            </div>
+        </details>
     </section>
 
     <!-- Past NERCs Section -->
@@ -619,7 +1404,7 @@
     </footer>
 
     <button id="back-to-top" aria-label="Back to top">&uarr;</button>
-    <script src="script.js?v=1.1"></script>
+    <script src="script.js?v=1.2"></script>
 </body>
 
 </html>

@@ -22,14 +22,18 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:nerc2026@nerc2026.github.io
-DTSTAMP:20260713T120000Z
+SEQUENCE:1
+DTSTAMP:20260928T164920Z
 DTSTART;TZID=America/New_York:20261003T080000
 DTEND;TZID=America/New_York:20261003T170000
 SUMMARY:NERC 2026 — Northeast Robotics Colloquium
-DESCRIPTION:The Northeast Robotics Colloquium (NERC 2026) at Princeton Uni
- versity. Keynotes\, Rising Stars talks\, and poster sessions. Details: ht
- tps://nerc2026.github.io/
-LOCATION:Commons\, 11 Ivy Lane\, Princeton\, NJ 08540
+DESCRIPTION:The Northeast Robotics Colloquium (NERC 2026) at Princeton Univ
+ ersity. Keynotes\, Rising Stars talks\, and poster sessions. Details: http
+ s://nerc2026.github.io/\nVenue map: https://www.google.com/maps/search/?ap
+ i=1&query=40.347278%2C-74.650111\nUse this pin for Commons Library. Search
+ ing for 11 Ivy Lane points to the wrong building.
+GEO:40.347278;-74.650111
+LOCATION:Commons Library\, Princeton University\, Princeton\, NJ
 URL:https://nerc2026.github.io/
 STATUS:CONFIRMED
 END:VEVENT
