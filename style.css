@@ -456,17 +456,6 @@ section {
     text-align: center;
 }
 
-.poster-setup {
-    max-width: 780px;
-    margin: 1.5rem auto 0;
-    padding-left: 1.25rem;
-    list-style: disc;
-}
-
-.poster-setup li + li {
-    margin-top: 0.75rem;
-}
-
 .poster-lookup-heading {
     margin: 2.5rem 0 0.5rem;
     font-size: 1.6rem;
