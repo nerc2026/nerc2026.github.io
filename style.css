@@ -906,6 +906,36 @@ section {
     font-weight: 400;
 }
 
+.schedule-label {
+    margin: 0 0 0.4rem;
+    color: var(--primary-text);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.schedule-talk-title {
+    margin: 0;
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-wrap: pretty;
+}
+
+.schedule-speaker {
+    margin-top: 0.6rem;
+}
+
+.schedule-speaker a {
+    color: inherit;
+    font-weight: 500;
+}
+
+.schedule-speaker span {
+    display: inline-block;
+}
+
 /* Logistics / Travel */
 .logistics-grid {
     display: grid;
